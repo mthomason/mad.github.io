@@ -1,0 +1,59 @@
+# MAD Designer Website
+
+## Details
+
+MAD Designer is a mobile analytics document designer built for iOS devices (iPhone, iPad, My Mac (designed for iPad)).  It is in the [Apple iPhone App Store](https://apps.apple.com/us/app/mad-designer/id666001433) and the [Mac App Store](https://apps.apple.com/us/app/mad-designer/id666001433).
+
+Below are some details about the application:
+
+1. It is not yet localized.  It is currently English only.  Other languages should be coming soon, but no promises.
+2. It allows users to connect to the following databases
+	1. MySQL
+	2. Microsoft SQL Server
+3. It is a modern business intelligence platform.
+4. The software has three main parts
+	1. A query designer
+	2. A report designer
+	3. A report viewer
+5. The target of this application are users and businesses that want to connect to MySQL and Microsoft SQL Server from their iPhone, iPad, or Mac OS.
+6. The application name is `MAD Designer`
+7. This website is made up of static web files
+8. This website is hosted at [mad.everydayapps.com](https://mad.everydayapps.com/) though the repo name is `mad.github.io`.  It is hosted by Github, but the Github URL for the site should not be used.
+
+## App Store Information
+
+**Name**: MAD Designer
+**Subtitle**: Mobile BI Report Builder
+**Bundle ID**: com.everydayapps.mad.designer
+**Apple ID**: 666001433
+**Subtitle**: Mobile BI Report Builder
+**Category**: _Business_ and _Productivity_
+**Age Suitability URL**: There currently isn't one
+**Promotional Text**: Design and share custom business intelligence reports on the go. Connect to SQL Server and MySQL, build queries, and export reports instantly.
+**Keywords**: intelligence,bi,report,query,sql,server,database,mysql,enterprise,creator,maker,generator,db,data,
+**Support URL**: https://mad.everydayapps.com/contact.html
+**Marketing URL**: https://mad.everydayapps.com/
+**Version**: 9.0
+**Copyright**: 2025 Everyday Apps LLC
+
+**Description**
+MAD Designer is a powerful mobile business intelligence tool that lets you design, view, and share custom reports directly from your enterprise data. Built for SQL Server and MySQL databases, it enables professionals to transform raw data into clear, actionable insights on iPhone, iPad, and Mac (Designed for iPad).
+
+With MAD Designer, you can connect securely to SQL Server and MySQL databases, design ad hoc queries with multiple tables, joins, groupings, and filters, and build rich reports with data labels, images, summaries, and custom formatting. Reports can be shared as interactive MAD document files with colleagues, or exported as static PDF files for wider distribution.
+
+Sample reports are included so you can get started quickly. Whether you are a business analyst, data professional, or decision-maker, MAD Designer makes it easy to create the reports you need—anytime, anywhere.
+
+**What's New in This Version**
+This release brings MAD Designer back to the App Store with updated compatibility and performance improvements. Version 9.0 delivers a smoother experience for designing and sharing reports with SQL Server and MySQL databases.
+
+## Branding Guidelines
+
+**Background Color**: #ffffff;
+**Primary Color**: #6A9AD1;
+**Accent Color**: #B6494C;
+
+## Logos
+
+_The logos do not have the rounded corners._
+
+The icons are in the `img` folder.  The number at the end of the icon name is the size of the image.  For instance, the one that ends with 20 is a 20x20 icon.  The one that ends in 72 is 72x72.
