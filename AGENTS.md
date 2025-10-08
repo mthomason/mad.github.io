@@ -57,3 +57,10 @@ This release brings MAD Designer back to the App Store with updated compatibilit
 _The logos do not have the rounded corners._
 
 The icons are in the `img` folder.  The number at the end of the icon name is the size of the image.  For instance, the one that ends with 20 is a 20x20 icon.  The one that ends in 72 is 72x72.
+
+## Development Guidelines
+
+- **Privacy Policy**: The text content of `privacy.html` is a legal document and **must not be altered**. You may update the styling and layout, but the core text must remain unchanged.
+- **Indentation**: Use tabs for indentation in all HTML and CSS files.
+- **Website Structure**: The website is built with static HTML and CSS. All styles should be centralized in the `css/style.css` file to maintain a consistent design.
+- **Verification**: Before submitting changes, perform frontend verification by running a Playwright script to capture screenshots of the updated pages. Ensure the visual appearance is correct.
