@@ -4,6 +4,8 @@
 
 MAD Designer is a mobile analytics document designer built for iOS devices (iPhone, iPad, My Mac (designed for iPad)).  It is in the [Apple iPhone App Store](https://apps.apple.com/us/app/mad-designer/id666001433) and the [Mac App Store](https://apps.apple.com/us/app/mad-designer/id666001433).
 
+This project uses tabs for spacing.
+
 Below are some details about the application:
 
 1. `MAD` is short for Mobile Analytics Document (M.A.D.).  The software is a _mobile analytics document designer_.
