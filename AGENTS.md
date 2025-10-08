@@ -6,19 +6,20 @@ MAD Designer is a mobile analytics document designer built for iOS devices (iPho
 
 Below are some details about the application:
 
-1. It is not yet localized.  It is currently English only.  Other languages should be coming soon, but no promises.
-2. It allows users to connect to the following databases
+1. `MAD` is short for Mobile Analytics Document (M.A.D.).  The software is a _mobile analytics document designer_.
+2. It is not yet localized.  It is currently English only.  Other languages should be coming soon, but no promises.
+3. It allows users to connect to the following databases
 	1. MySQL
 	2. Microsoft SQL Server
-3. It is a modern business intelligence platform.
-4. The software has three main parts
+4. It is a modern business intelligence platform.
+5. The software has three main parts
 	1. A query designer
 	2. A report designer
 	3. A report viewer
-5. The target of this application are users and businesses that want to connect to MySQL and Microsoft SQL Server from their iPhone, iPad, or Mac OS.
-6. The application name is `MAD Designer`
-7. This website is made up of static web files
-8. This website is hosted at [mad.everydayapps.com](https://mad.everydayapps.com/) though the repo name is `mad.github.io`.  It is hosted by Github, but the Github URL for the site should not be used.
+6. The target of this application are users and businesses that want to connect to MySQL and Microsoft SQL Server from their iPhone, iPad, or Mac OS.
+7. The application name is `MAD Designer`
+8. This website is made up of static web files
+9. This website is hosted at [mad.everydayapps.com](https://mad.everydayapps.com/) though the repo name is `mad.github.io`.  It is hosted by Github, but the Github URL for the site should not be used.
 
 ## App Store Information
 
