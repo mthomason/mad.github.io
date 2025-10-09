@@ -67,3 +67,15 @@ The icons are in the `img` folder.  The number at the end of the icon name is th
 - **Indentation**: Use tabs for indentation in all HTML and CSS files.
 - **Website Structure**: The website is built with static HTML and CSS. All styles should be centralized in the `css/style.css` file to maintain a consistent design.
 - **Verification**: Before submitting changes, perform frontend verification by running a Playwright script to capture screenshots of the updated pages. Ensure the visual appearance is correct.
+
+## Screenshots
+
+`app-preview.mp4`: This is an App Preview of the iPhone.  It's 29 seconds long and 886 × 1920 resolution.  It is `H.264` encoded.
+`screenshot-00.png`: This is a screenshot of the file explorer which shows some sample reports.
+`screenshot-01.png`: This is a screenshot how how to create a new report. It shows a screen to choose a datasource by selecting MySQL or Microsoft SQL Server.
+`screenshot-02.png`: This is a screenshot of they query designer.
+`screenshot-03.png`: This is a landscape screenshot of the query designer.
+`screenshot-04.png`: This is a screenshot of the report designer.
+`screenshot-05.png`: This is another screenshot of the report designer.  This one shows a user adding formatting to a data field.
+`screenshot-06.png`: This is how you select a new data field for the report designer.  It has data label, static label, aggregate, image, and whitespace as options.
+`screenshot-07.png`: This is a screenshot shows a sample report.
