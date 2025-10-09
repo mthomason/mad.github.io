@@ -68,9 +68,9 @@ The icons are in the `img` folder.  The number at the end of the icon name is th
 - **Website Structure**: The website is built with static HTML and CSS. All styles should be centralized in the `css/style.css` file to maintain a consistent design.
 - **Verification**: Before submitting changes, perform frontend verification by running a Playwright script to capture screenshots of the updated pages. Ensure the visual appearance is correct.
 
-## Screenshots
+## Screenshots and App Preview
 
-`app-preview.mp4`: This is an App Preview of the iPhone.  It's 29 seconds long and 886 × 1920 resolution.  It is `H.264` encoded.
+`app-preview.mp4`: This is an App Preview of the iPhone.  It's 29 seconds long and 886 × 1920 resolution.  It is `H.264` encoded `.mp4` file.
 `screenshot-00.png`: This is a screenshot of the file explorer which shows some sample reports.
 `screenshot-01.png`: This is a screenshot how how to create a new report. It shows a screen to choose a datasource by selecting MySQL or Microsoft SQL Server.
 `screenshot-02.png`: This is a screenshot of they query designer.
