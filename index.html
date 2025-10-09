@@ -33,11 +33,15 @@
 	<section class="hero">
 		<div class="container">
 			<h1>MAD Designer</h1>
-			<p>Mobile BI Report Builder</p>
+			<p class="hero-subheading">Mobile BI Report Builder</p>
 			<p>Design and share custom business intelligence reports on the go. Connect to SQL Server and MySQL, build queries, and export reports instantly.</p>
 			<div class="app-store-buttons">
-				<a href="https://apps.apple.com/us/app/mad-designer/id666001433" class="btn" target="_blank">Download for iPhone & iPad</a>
-				<a href="https://apps.apple.com/us/app/mad-designer/id666001433" class="btn btn-accent" target="_blank">Download for Mac</a>
+				<a href="https://apps.apple.com/us/app/mad-designer/id666001433" target="_blank" class="app-store-badge">
+					<img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store">
+				</a>
+				<a href="https://apps.apple.com/us/app/mad-designer/id666001433" target="_blank" class="app-store-badge">
+					<img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-mac-app-store.svg" alt="Download on the Mac App Store">
+				</a>
 			</div>
 		</div>
 	</section>
@@ -61,6 +65,51 @@
 				<div class="feature">
 					<h3>Share & Export</h3>
 					<p>Share interactive reports with colleagues or export them as PDFs for wide distribution.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="gallery">
+		<div class="container">
+			<h2>See It In Action</h2>
+			<div class="gallery-container">
+				<div class="gallery-item" data-type="video" data-source="img/app-preview.mp4">
+					<img src="img/screenshot-00.png" alt="App Preview Video">
+					<div class="play-icon"></div>
+					<p>App Preview</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="img/screenshot-00.png">
+					<img src="img/screenshot-00.png" alt="A screenshot of the file explorer which shows some sample reports.">
+					<p>The file explorer, showing available sample reports.</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="img/screenshot-01.png">
+					<img src="img/screenshot-01.png" alt="A screenshot of how to create a new report. It shows a screen to choose a datasource by selecting MySQL or Microsoft SQL Server.">
+					<p>Choose a datasource (MySQL or SQL Server) to create a new report.</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="img/screenshot-02.png">
+					<img src="img/screenshot-02.png" alt="A screenshot of the query designer.">
+					<p>The powerful and intuitive query designer.</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="img/screenshot-03.png">
+					<img src="img/screenshot-03.png" alt="A landscape screenshot of the query designer.">
+					<p>A landscape view of the query designer for more complex queries.</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="img/screenshot-04.png">
+					<img src="img/screenshot-04.png" alt="A screenshot of the report designer.">
+					<p>The report designer, where you bring your data to life.</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="img/screenshot-05.png">
+					<img src="img/screenshot-05.png" alt="A screenshot of the report designer showing a user adding formatting to a data field.">
+					<p>Easily apply formatting to any data field in your report.</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="img/screenshot-06.png">
+					<img src="img/screenshot-06.png" alt="A screenshot showing how to select a new data field for the report designer, with options for data label, static label, aggregate, image, and whitespace.">
+					<p>Select from various data field types to build your report.</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="img/screenshot-07.png">
+					<img src="img/screenshot-07.png" alt="A screenshot of a sample report.">
+					<p>A finished sample report, ready to be shared.</p>
 				</div>
 			</div>
 		</div>
@@ -91,5 +140,17 @@
 		</div>
 	</footer>
 
+	<div id="lightbox" class="lightbox">
+		<span class="lightbox-close">&times;</span>
+		<div class="lightbox-content">
+			<div class="lightbox-item-container">
+				<!-- Injected by JS -->
+			</div>
+			<a class="lightbox-prev" aria-label="Previous">&#10094;</a>
+			<a class="lightbox-next" aria-label="Next">&#10095;</a>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
 </body>
 </html>
