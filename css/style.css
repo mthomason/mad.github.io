@@ -8,6 +8,11 @@ body {
 	color: #333;
 }
 
+/* Section Alternating Backgrounds */
+body > section:nth-of-type(even) {
+	background-color: #f4f4f4;
+}
+
 /* Container */
 .container {
 	width: 80%;
@@ -99,7 +104,6 @@ header nav a {
 .features {
 	padding: 40px 0;
 	text-align: center;
-	background-color: #f4f4f4;
 }
 
 .features h2 {
@@ -120,13 +124,28 @@ header nav a {
 	border-radius: 5px;
 }
 
+.feature-icon-background {
+	width: 90px;
+	height: 90px;
+	background-color: #6A9AD1; /* Primary blue */
+	border-radius: 50%;
+	margin: 0 auto 20px; /* Center and add space below */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.feature-icon {
+	height: 50px;
+	width: auto;
+}
+
 .feature h3 {
 	color: #6A9AD1; /* Primary Color */
 }
 
 /* Audience Section */
 .audience {
-	background-color: #f4f4f4;
 	padding: 40px 0;
 	text-align: center;
 }
