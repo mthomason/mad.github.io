@@ -247,7 +247,7 @@ footer a {
 }
 
 .content-page ul {
-	list-style-position: inside;
+	/* list-style-position: inside; */ /* This line is causing issues with the bullet points in the privacy policy. */
 }
 
 /* Gallery Section */
