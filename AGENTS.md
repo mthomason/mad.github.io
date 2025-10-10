@@ -51,9 +51,9 @@ This release brings MAD Designer back to the App Store with updated compatibilit
 
 ## Branding Guidelines
 
-**Background Color**: #ffffff;
-**Primary Color**: #0AA0D5;
-**Accent Color**: #DC2449;
+- **Background Color**: #ffffff;
+- **Primary Color**: #0AA0D5;
+- **Accent Color**: #DC2449;
 
 ## Logos
 
