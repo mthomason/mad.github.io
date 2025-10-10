@@ -29,3 +29,9 @@ MAD Designer is built for:
 ## About This Website
 
 This website is built with static HTML, CSS, and a small amount of JavaScript. It serves as the main marketing and support hub for the MAD Designer application. All custom styles are located in the `css/style.css` file. Please note that this project uses tabs for indentation.
+
+## Other Documents
+
+*    [Privacy Policy](privacy.md)
+*    [About the .MAD File Type](mad-file-type.md)
+
