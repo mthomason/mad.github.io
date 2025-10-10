@@ -64,6 +64,11 @@ header nav a {
 	color: #333;
 	text-decoration: none;
 	font-weight: bold;
+	transition: color 0.3s;
+}
+
+header nav a:hover {
+	color: #DC2449; /* Accent Color */
 }
 
 /* Hero Section */
@@ -215,6 +220,24 @@ footer a {
 	color: #0AA0D5; /* Primary Color */
 	text-decoration: none;
 	margin: 0 5px;
+}
+
+/* Button Styles */
+.btn {
+	display: inline-block;
+	background-color: #0AA0D5; /* Primary Color */
+	color: #ffffff;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: background-color 0.3s;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #0883b3; /* Darker shade of primary color */
 }
 
 /* Form Page Styles */
