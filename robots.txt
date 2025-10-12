@@ -4,3 +4,5 @@ User-agent: *
 Disallow: /*.md$
 Disallow: /.git/
 Allow: /
+
+Sitemap: https://mad.everydayapps.com/sitemap.xml

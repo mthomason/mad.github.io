@@ -1,0 +1,21 @@
+{
+	"name": "MAD Designer",
+	"short_name": "MAD Designer",
+	"description": "MAD Designer is a powerful mobile business intelligence tool that lets you design, view, and share custom reports directly from your enterprise data. Built for SQL Server and MySQL databases, it enables professionals to transform raw data into clear, actionable insights on iPhone, iPad, and Mac (Designed for iPad).",
+	"icons": [
+		{
+			"src": "/img/mad-designer-icon-72.png",
+			"sizes": "72x72",
+			"type": "image/png"
+		},
+		{
+			"src": "/img/mad-designer-icon-1024.png",
+			"sizes": "1024x1024",
+			"type": "image/png"
+		}
+	],
+	"start_url": "/",
+	"display": "standalone",
+	"theme_color": "#0AA0D5",
+	"background_color": "#ffffff"
+}
