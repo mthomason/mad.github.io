@@ -1,5 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+	function trackEvent(category, action, label) {
+		if (typeof gtag === 'function') {
+			gtag('event', action, {
+				'event_category': category,
+				'event_label': label
+			});
+		}
+	}
+
 	function setupLightbox() {
 		const galleryItems = document.querySelectorAll('.gallery-item');
 		const lightbox = document.getElementById('lightbox');
@@ -89,6 +98,42 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 
+	function setupAnalytics() {
+		// App Store Badge
+		const appStoreLink = document.getElementById('app-store-link');
+		if (appStoreLink) {
+			appStoreLink.addEventListener('click', () => {
+				trackEvent('App Store', 'Click', 'App Store Badge');
+			});
+		}
+
+		// Navigation Links
+		const navLinks = document.querySelectorAll('header nav a');
+		navLinks.forEach(link => {
+			link.addEventListener('click', () => {
+				trackEvent('Navigation', 'Click', link.textContent);
+			});
+		});
+
+		// Gallery Items
+		const galleryItems = document.querySelectorAll('.gallery-item');
+		galleryItems.forEach(item => {
+			item.addEventListener('click', () => {
+				const label = item.querySelector('p')?.textContent || 'Gallery Item';
+				trackEvent('Gallery', 'Click', label);
+			});
+		});
+
+		// Footer Links
+		const footerLinks = document.querySelectorAll('footer nav a');
+		footerLinks.forEach(link => {
+			link.addEventListener('click', () => {
+				trackEvent('Footer', 'Click', link.textContent);
+			});
+		});
+	}
+
 	setupLightbox();
 	updateAppStoreBadge();
+	setupAnalytics();
 });
