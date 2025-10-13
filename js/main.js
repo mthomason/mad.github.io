@@ -83,6 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Dynamically set App Store badge based on OS
 	const appStoreBadge = document.getElementById('app-store-badge');
 	if (appStoreBadge && navigator.platform.indexOf('Mac') > -1) {
-		appStoreBadge.src = 'img/app-store-badges/badge-download-on-the-mac-app-store.svg';
+		appStoreBadge.src = 'img/app-store-badges/us/badge-download-on-the-mac-app-store.svg';
 	}
 });
