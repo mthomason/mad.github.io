@@ -113,23 +113,29 @@ header nav a:hover {
 	color: #f4f4f4;
 }
 
-/* App Store Buttons */
-.app-store-buttons {
+/* App Store Container */
+.app-store-container {
 	margin-top: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 20px;
-	flex-wrap: wrap;
+	text-align: center;
 }
 
-.app-store-badge img {
-	height: 40px;
-	transition: opacity 0.3s;
+#app-store-badge {
+	height: 50px;
+	border: 2px solid white;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+	transition: transform 0.3s;
 }
 
-.app-store-badge:hover img {
-	opacity: 0.8;
+#app-store-link:hover #app-store-badge {
+	transform: scale(1.05);
+}
+
+.app-availability-text {
+	color: #ffffff;
+	margin-top: 10px;
+	font-size: 0.9em;
+	font-style: italic;
 }
 
 
