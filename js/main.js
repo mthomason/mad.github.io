@@ -91,19 +91,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
-	function updateAppStoreBadge() {
-		const appStoreBadge = document.getElementById('app-store-badge');
-		if (appStoreBadge && navigator.platform.indexOf('Mac') > -1) {
-			appStoreBadge.src = 'img/app-store-badges/us/badge-download-on-the-mac-app-store.svg';
-		}
-	}
-
 	function setupAnalytics() {
-		// App Store Badge
-		const appStoreLink = document.getElementById('app-store-link');
-		if (appStoreLink) {
-			appStoreLink.addEventListener('click', () => {
-				trackEvent('App Store', 'Click', 'App Store Badge');
+		// Sponsor Link
+		const sponsorLink = document.getElementById('sponsor-link');
+		if (sponsorLink) {
+			sponsorLink.addEventListener('click', () => {
+				trackEvent('Sponsor', 'Click', 'Sponsor Link');
 			});
 		}
 
@@ -134,6 +127,5 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	setupLightbox();
-	updateAppStoreBadge();
 	setupAnalytics();
 });

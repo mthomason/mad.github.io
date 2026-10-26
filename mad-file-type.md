@@ -13,10 +13,7 @@ These files serve as a container for all the elements that make up a mobile anal
 
 ## How to Open a .mad File
 
-The primary application for opening and interacting with `.mad` files is **MAD Designer**. You can download it from the Apple App Store for your iPhone, iPad, or Mac.
-
--   [Download on the App Store](https://apps.apple.com/us/app/mad-designer/id666001433)
--   [Download on the Mac App Store](https://apps.apple.com/us/app/mad-designer/id666001433)
+The primary application for opening and interacting with `.mad` files is **MAD Designer**. The app is between App Store releases and returns in early 2027; [sponsorship](https://github.com/sponsors/mthomason) funds the relaunch.
 
 ## More Information
 

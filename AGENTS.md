@@ -2,7 +2,7 @@
 
 ## Details
 
-MAD Designer is a mobile analytics document designer built for iOS devices (iPhone, iPad, My Mac (designed for iPad)).  It is in the [Apple iPhone App Store](https://apps.apple.com/us/app/mad-designer/id666001433) and the [Mac App Store](https://apps.apple.com/us/app/mad-designer/id666001433).
+MAD Designer is a mobile analytics document designer built for iOS devices (iPhone, iPad, My Mac (designed for iPad)).  It is currently between Apple App Store releases and returns in early 2027; [sponsorship](https://github.com/sponsors/mthomason) funds the relaunch.
 
 This project uses tabs for spacing.
 
@@ -24,6 +24,8 @@ Below are some details about the application:
 9. This website is hosted at [mad.everydayapps.com](https://mad.everydayapps.com/) though the repo name is `mad.github.io`.  It is hosted by Github, but the Github URL for the site should not be used.
 
 ## App Store Information
+
+**Current status**: The app is not currently in the App Store; the relaunch is targeted for early 2027. The listing below is the record from the last release.
 
 **Name**: MAD Designer
 **Subtitle**: Mobile BI Report Builder
