@@ -119,17 +119,43 @@ header nav a:hover {
 	text-align: center;
 }
 
+.hero-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 12px;
+	margin-top: 10px;
+	margin-bottom: 14px;
+}
+
 .sponsor-button {
 	display: inline-block;
-	margin-top: 10px;
-	padding: 12px 24px;
+	margin-top: 4px;
+	padding: 12px 22px;
 	background-color: #0AA0D5;
 	color: #ffffff;
 	text-decoration: none;
 	font-weight: bold;
 	border-radius: 8px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-	transition: transform 0.3s;
+	transition: transform 0.3s, background-color 0.3s;
+}
+
+.sponsor-button.secondary-button {
+	background-color: rgba(255, 255, 255, 0.18);
+	border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.sponsor-button.secondary-button:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.sponsor-button.accent-button {
+	background-color: #DC2448;
+}
+
+.sponsor-button.accent-button:hover {
+	background-color: #b81d3b;
 }
 
 .sponsor-button:hover {

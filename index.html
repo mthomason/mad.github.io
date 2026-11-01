@@ -4,8 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MAD Designer - Mobile Analytics Document Designer</title>
-	<meta name="description" content="BI software for iPhone, iPad, and Mac.  Design reports against MySQL and SQL Server.">
-	<meta name="keywords" content="intelligence,bi,report,query,sql,server,database,mysql,enterprise,creator,maker,generator,db,data">
+	<meta name="description" content="Open-source BI software for iPhone, iPad, and native macOS. Design queries and reports against PostgreSQL, MySQL, MariaDB, SQL Server, and SQLite.">
+	<meta name="keywords" content="intelligence,bi,report,query,sql,server,database,mysql,postgresql,sqlite,macos,ios,enterprise,creator,maker,generator,db,data">
 	<meta name="author" content="Everyday Apps LLC">
 	<meta name="publisher" content="Everyday Apps LLC">
 	<meta name="robots" content="index, follow">
@@ -23,15 +23,15 @@
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="MAD Designer">
 	<meta property="og:url" content="https://mad.everydayapps.com/">
-	<meta property="og:title" content="MAD Designer - Mobile BI Report Builder">
-	<meta property="og:description" content="MAD Designer for iPhone, iPad, and Mac connects to MySQL & Microsoft SQL Server, letting you design, view, and share custom business intelligence reports on the go.">
+	<meta property="og:title" content="MAD Designer - Mobile & Desktop BI Report Builder">
+	<meta property="og:description" content="Open-source business intelligence and report designer for iPhone, iPad, and native macOS. Connect to PostgreSQL, MySQL, MariaDB, SQL Server, and SQLite.">
 	<meta property="og:image" content="https://mad.everydayapps.com/img/mad-designer-icon-1024.png">
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image">
 	<meta property="twitter:url" content="https://mad.everydayapps.com/">
-	<meta property="twitter:title" content="MAD Designer - Mobile BI Report Builder">
-	<meta property="twitter:description" content="MAD Designer for iPhone, iPad, and Mac connects to MySQL & Microsoft SQL Server, letting you design, view, and share custom business intelligence reports on the go.">
+	<meta property="twitter:title" content="MAD Designer - Mobile & Desktop BI Report Builder">
+	<meta property="twitter:description" content="Open-source business intelligence and report designer for iPhone, iPad, and native macOS. Connect to PostgreSQL, MySQL, MariaDB, SQL Server, and SQLite.">
 	<meta property="twitter:image" content="https://mad.everydayapps.com/img/mad-designer-icon-1024.png">
 
 	<link rel="preload" href="css/style.css" as="style">
@@ -77,6 +77,8 @@
 			<nav>
 				<ul>
 					<li><a href="mad-file-type.html">.mad File Type</a></li>
+					<li><a href="https://docs.everydayapps.com/" target="_blank" rel="noopener">Docs</a></li>
+					<li><a href="https://github.com/mthomason/MAD" target="_blank" rel="noopener">GitHub</a></li>
 					<li><a href="contact.html">Contact</a></li>
 					<li><a href="privacy.html">Privacy</a></li>
 				</ul>
@@ -88,12 +90,17 @@
 		<section class="hero">
 		<div class="container">
 			<h1>MAD Designer</h1>
-			<p class="hero-subheading">Mobile BI Report Builder</p>
-			<p>Design and share custom business intelligence reports on the go. Connect to SQL Server and MySQL, build queries, and export reports instantly.</p>
+			<p class="hero-subheading">Open-Source BI Report Builder for macOS &amp; iOS</p>
+			<p>Design and share custom business intelligence reports anywhere. Connect to PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, and SQLite, build queries visually or in SQL, and export reports to PDF, HTML, CSV, and JSON.</p>
 			<div class="app-store-container">
-				<p class="app-availability-text">MAD Designer is between App Store releases and returns in early 2027.</p>
-				<a id="sponsor-link" class="sponsor-button" href="https://github.com/sponsors/mthomason" target="_blank" rel="noopener">Sponsor the return to the App Store</a>
-				<p class="app-availability-text">Sponsors fund the development and the relaunch. Thank you.</p>
+				<div class="hero-buttons">
+					<a class="sponsor-button" href="https://github.com/mthomason/MAD/releases/download/v9.1.0-macos/MAD-Designer-macOS.dmg">Download for macOS (.dmg)</a>
+					<a class="sponsor-button secondary-button" href="https://github.com/mthomason/MAD" target="_blank" rel="noopener">View Source on GitHub</a>
+					<a class="sponsor-button secondary-button" href="https://docs.everydayapps.com/macos.html" target="_blank" rel="noopener">macOS Guide &amp; Docs</a>
+					<a id="sponsor-link" class="sponsor-button accent-button" href="https://github.com/sponsors/mthomason" target="_blank" rel="noopener">Sponsor the App Store Relaunch</a>
+				</div>
+				<p class="app-availability-text">Install via Homebrew: <code>brew install --cask mthomason/tap/mad-designer</code> &bull; Sample reports: <a href="https://github.com/mthomason/MAD/releases/download/v9.1.0-macos/London.mad" style="color: #ffffff; text-decoration: underline;">London.mad</a> &middot; <a href="https://github.com/mthomason/MAD/releases/download/v9.1.0-macos/Music.mad" style="color: #ffffff; text-decoration: underline;">Music.mad</a></p>
+				<p class="app-availability-text">The iOS App Store release returns in early 2027. Sponsors fund development and the relaunch.</p>
 			</div>
 		</div>
 	</section>
@@ -107,7 +114,7 @@
 						<img src="img/icon-database96x64.png" alt="Database Icon" class="feature-icon">
 					</div>
 					<h3>Connect to Your Databases</h3>
-					<p>Securely connect to your MySQL and Microsoft SQL Server databases from anywhere.</p>
+					<p>Securely connect to PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, and SQLite databases.</p>
 				</div>
 				<div class="feature">
 					<div class="feature-icon-background">
