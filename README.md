@@ -4,7 +4,7 @@ This repository contains the source code for the official website of **MAD Desig
 
 ## About MAD Designer
 
-MAD Designer is a powerful mobile business intelligence (BI) tool that empowers users to design, view, and share custom reports directly from their enterprise data sources. Built for professionals who need on-the-go access to their data, it provides a seamless experience for connecting to SQL Server and MySQL databases.
+MAD Designer is an open-source business intelligence (BI) tool that empowers users to design, view, and share custom reports directly from their enterprise data sources. Built for professionals who need on-the-go access to their data, it connects to PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, and SQLite, and runs on iPhone, iPad, and native macOS.
 
 The application consists of three main components:
 1.  A **Query Designer** to build ad hoc queries with multiple tables, joins, and filters.
@@ -15,7 +15,7 @@ Reports are saved as `.mad` files (Mobile Analytics Document), a self-contained 
 
 ## Key Features
 
-*   **Direct Database Connectivity**: Securely connect to MySQL and Microsoft SQL Server databases.
+*   **Direct Database Connectivity**: Securely connect to PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, and SQLite databases.
 *   **Powerful Query Builder**: Craft complex SQL queries with an intuitive visual interface.
 *   **Rich Report Authoring**: Design professional reports with a variety of formatting and layout options.
 *   **Share and Export**: Share interactive `.mad` files with colleagues or export reports as static PDFs for wider distribution.
@@ -32,6 +32,7 @@ This website is built with static HTML, CSS, and a small amount of JavaScript. I
 
 ## Other Documents
 
+*    [Documentation site](https://docs.everydayapps.com/) — the `.mad` specification, macOS guide, and developer docs
 *    [Privacy Policy](privacy.md)
 *    [About the .MAD File Type](mad-file-type.md)
 

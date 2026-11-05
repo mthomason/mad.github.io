@@ -519,3 +519,204 @@ footer a {
 	right: -60px;
 	border-radius: 0 3px 3px 0;
 }
+/* Analytics consent banner (shown only in EEA/UK/CH timezones) */
+.analytics-consent {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 900;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem 1rem;
+	align-items: center;
+	justify-content: center;
+	padding: 0.875rem 1.25rem;
+	background: #f6f8fa;
+	border-top: 1px solid #d0d7de;
+	box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.08);
+	color: #24292f;
+	font-size: 0.875rem;
+}
+
+.analytics-consent[hidden] {
+	display: none;
+}
+
+.analytics-consent p {
+	max-width: 46rem;
+	margin: 0;
+}
+
+.analytics-consent-actions {
+	display: flex;
+	flex: none;
+	gap: 0.5rem;
+}
+
+.analytics-consent button {
+	padding: 0.35rem 0.9rem;
+	border: 1px solid #d0d7de;
+	border-radius: 6px;
+	background: #ffffff;
+	color: #24292f;
+	font: inherit;
+	cursor: pointer;
+}
+
+.analytics-consent button[data-consent="granted"] {
+	border-color: #0aa0d5;
+	background: #0aa0d5;
+	color: #ffffff;
+	font-weight: 600;
+}
+
+.analytics-consent button:hover {
+	border-color: #0aa0d5;
+}
+
+/* Keyboard focus */
+a:focus-visible,
+button:focus-visible,
+.gallery-item:focus-visible {
+	outline: 3px solid #0AA0D5;
+	outline-offset: 3px;
+}
+
+/* The lightbox controls are buttons so they can be reached by keyboard. */
+.lightbox-close {
+	padding: 0;
+	border: 0;
+	background: transparent;
+	font-family: inherit;
+	line-height: 1;
+}
+
+.lightbox-prev,
+.lightbox-next {
+	border: 0;
+	font-family: inherit;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+	.container {
+		width: 92%;
+	}
+
+	.hero h1 {
+		font-size: 2em;
+	}
+
+	.hero .hero-subheading {
+		font-size: 1.25em;
+	}
+
+	.hero p {
+		font-size: 1.1em;
+	}
+
+	footer .container {
+		flex-wrap: wrap;
+		gap: 0.5rem 1rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.container {
+		width: auto;
+		padding: 0 16px;
+	}
+
+	header .container {
+		flex-wrap: wrap;
+		gap: 12px;
+	}
+
+	header nav ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 8px 16px;
+	}
+
+	header nav ul li {
+		margin-left: 0;
+	}
+
+	.hero {
+		padding: 40px 0;
+	}
+
+	.hero-buttons {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.hero-buttons .sponsor-button {
+		width: 100%;
+		max-width: 320px;
+		text-align: center;
+	}
+
+	.feature-icon-background {
+		width: 120px;
+		height: 80px;
+	}
+
+	.gallery {
+		padding: 24px 0;
+	}
+
+	.features h2,
+	.gallery h2,
+	.audience h2 {
+		font-size: 1.6em;
+	}
+
+	.form-page form {
+		padding: 1rem;
+	}
+
+	footer .container {
+		flex-direction: column;
+		gap: 0.5rem;
+	}
+
+	.lightbox-close {
+		right: 8px;
+		top: -44px;
+	}
+
+	.lightbox-prev {
+		left: 4px;
+	}
+
+	.lightbox-next {
+		right: 4px;
+	}
+
+	.analytics-consent {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+/* Contact form extras */
+.form-honeypot {
+	position: absolute;
+	left: -9999px;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+}
+
+.form-note {
+	margin-top: 1rem;
+	font-size: 0.85em;
+	color: #666;
+}
+
+.form-page .btn {
+	margin: 0.25rem;
+}

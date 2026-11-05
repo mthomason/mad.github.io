@@ -3,35 +3,52 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#0AA0D5">
 	<title>MAD File - What is a .mad file and how to open it?</title>
-	<meta name="description" content="Learn about the .mad file extension, a Mobile Analytics Document created by MAD Designer for designing and sharing business intelligence reports that connect to MySQL and Microsoft SQL Server.">
+	<meta name="description" content="Learn about the .mad file extension, a Mobile Analytics Document created by MAD Designer for designing and sharing business intelligence reports that connect to PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, and SQLite.">
 	<meta name="keywords" content="mad, mad file, open mad file, file extension, business intelligence, mobile analytics document, mad designer">
 	<meta name="author" content="Everyday Apps LLC">
 	<meta name="publisher" content="Everyday Apps LLC">
 	<meta name="robots" content="index, follow">
 	<meta property="og:site_name" content="MAD Designer">
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SD849LC3MR"></script>
+	<!-- Google tag (gtag.js) with Consent Mode v2; the banner is in js/consent.js -->
 	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-SD849LC3MR');
+		(function () {
+			var granted = false;
+			try {
+				granted = window.localStorage.getItem('mad-analytics-consent') === 'granted';
+			} catch (e) {}
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			window.gtag = gtag;
+			gtag('consent', 'default', {
+				'ad_storage': 'denied',
+				'ad_user_data': 'denied',
+				'ad_personalization': 'denied',
+				'analytics_storage': granted ? 'granted' : 'denied'
+			});
+			gtag('js', new Date());
+			gtag('config', 'G-SD849LC3MR', {
+				'allow_google_signals': false,
+				'allow_ad_personalization_signals': false
+			});
+		})();
 	</script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SD849LC3MR"></script>
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://mad.everydayapps.com/mad-file-type.html">
 	<meta property="og:title" content="MAD File - What is a .mad file and how to open it?">
-	<meta property="og:description" content="Learn about the .mad file extension, a Mobile Analytics Document created by MAD Designer for designing and sharing business intelligence reports that connect to MySQL and Microsoft SQL Server.">
+	<meta property="og:description" content="Learn about the .mad file extension, a Mobile Analytics Document created by MAD Designer for designing and sharing business intelligence reports that connect to PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, and SQLite.">
 	<meta property="og:image" content="https://mad.everydayapps.com/img/mad-designer-icon-1024.png">
 
 	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://mad.everydayapps.com/mad-file-type.html">
-	<meta property="twitter:title" content="MAD File - What is a .mad file and how to open it?">
-	<meta property="twitter:description" content="Learn about the .mad file extension, a Mobile Analytics Document created by MAD Designer for designing and sharing business intelligence reports that connect to MySQL and Microsoft SQL Server.">
-	<meta property="twitter:image" content="https://mad.everydayapps.com/img/mad-designer-icon-1024.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:url" content="https://mad.everydayapps.com/mad-file-type.html">
+	<meta name="twitter:title" content="MAD File - What is a .mad file and how to open it?">
+	<meta name="twitter:description" content="Learn about the .mad file extension, a Mobile Analytics Document created by MAD Designer for designing and sharing business intelligence reports that connect to PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, and SQLite.">
+	<meta name="twitter:image" content="https://mad.everydayapps.com/img/mad-designer-icon-1024.png">
 
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
@@ -51,8 +68,8 @@
 		"name": "MAD Designer",
 		"operatingSystem": ["iOS", "macOS"],
 		"applicationCategory": "BusinessApplication",
-		"softwareVersion": "9.0.0",
-		"description": "MAD Designer for iOS connects to MySQL & Microsoft SQL Server, letting you design, view, and share custom business intelligence reports on the go.",
+		"softwareVersion": "9.1.0",
+		"description": "MAD Designer for iOS and macOS connects to PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, and SQLite, letting you design, view, and share custom business intelligence reports on the go.",
 		"url": "https://mad.everydayapps.com/",
 		"publisher": {
 			"@type": "Organization",
@@ -75,6 +92,8 @@
 			<nav>
 				<ul>
 					<li><a href="mad-file-type.html">.mad File Type</a></li>
+					<li><a href="https://docs.everydayapps.com/" target="_blank" rel="noopener">Docs</a></li>
+					<li><a href="https://github.com/mthomason/MAD" target="_blank" rel="noopener">GitHub</a></li>
 					<li><a href="contact.html">Contact</a></li>
 					<li><a href="privacy.html">Privacy</a></li>
 				</ul>
@@ -95,7 +114,7 @@
 				The .mad file format is central to the MAD Designer application. It allows users to design, save, and share interactive reports. Each .mad file is a self-contained package that includes:
 			</p>
 			<ul>
-				<li><b>Data Connection Details:</b> Information on how to connect to the underlying database, such as MySQL or Microsoft SQL Server.</li>
+				<li><b>Data Connection Details:</b> Information on how to connect to the underlying database, such as PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, or SQLite.</li>
 				<li><b>Query Definitions:</b> The SQL queries used to retrieve data for the report.</li>
 				<li><b>Report Layout:</b> The visual design of the report, including the placement of charts, tables, labels, and images.</li>
 				<li><b>Formatting Rules:</b> Custom formatting applied to data fields and other elements.</li>
@@ -103,25 +122,33 @@
 			<p>
 				Because .mad files bundle all necessary components, they are highly portable. A user can create a report on their Mac and share the .mad file with a colleague, who can then open and view the interactive report on their iPhone or iPad.
 			</p>
+			<p>
+				The full <a href="https://docs.everydayapps.com/">.mad specification and developer documentation</a> are open and published separately.
+			</p>
 
 			<h3>How to open a .mad file</h3>
 			<p>
-				You can open .mad files with the <strong>MAD Designer</strong> application. MAD Designer is between App Store releases and returns in early 2027.
+				You can open .mad files with the <strong>MAD Designer</strong> application. The native macOS build is available now; the iOS App Store release returns in early 2027.
 			</p>
 			<div class="app-store-container">
-				<a id="sponsor-link" class="sponsor-button" href="https://github.com/sponsors/mthomason" target="_blank" rel="noopener">Sponsor the return to the App Store</a>
+				<a class="sponsor-button" href="https://github.com/mthomason/MAD/releases/download/v9.1.0-macos/MAD-Designer-macOS.dmg">Download for macOS (.dmg)</a>
+				<a id="sponsor-link" class="sponsor-button" href="https://github.com/sponsors/mthomason" target="_blank" rel="noopener">Sponsor the App Store Relaunch</a>
 			</div>
 	</main>
 
 	<footer>
 		<div class="container">
-			<p>&copy; 2025 Everyday Apps LLC. All rights reserved.</p>
+			<p>&copy; 2025&ndash;2026 Everyday Apps LLC. All rights reserved.</p>
 			<nav>
-				<a href="contact.html">Contact</a> | <a href="privacy.html">Privacy</a>
+				<a href="https://docs.everydayapps.com/">Docs</a> |
+				<a href="https://github.com/mthomason/MAD">GitHub</a> |
+				<a href="contact.html">Contact</a> |
+				<a href="privacy.html">Privacy</a>
 			</nav>
 		</div>
 	</footer>
 
+	<script src="js/consent.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

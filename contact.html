@@ -3,35 +3,52 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#0AA0D5">
 	<title>Contact Support - MAD Designer</title>
-	<meta name="description" content="Get in touch with the MAD Designer team for support, feedback, or inquiries about connecting to MySQL and Microsoft SQL Server.">
+	<meta name="description" content="Get in touch with the MAD Designer team for support, feedback, or inquiries about connecting to PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, and SQLite.">
 	<meta name="keywords" content="contact, support, feedback, help, mad designer, mobile bi">
 	<meta name="author" content="Everyday Apps LLC">
 	<meta name="publisher" content="Everyday Apps LLC">
 	<meta name="robots" content="index, follow">
 	<meta property="og:site_name" content="MAD Designer">
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SD849LC3MR"></script>
+	<!-- Google tag (gtag.js) with Consent Mode v2; the banner is in js/consent.js -->
 	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'G-SD849LC3MR');
+		(function () {
+			var granted = false;
+			try {
+				granted = window.localStorage.getItem('mad-analytics-consent') === 'granted';
+			} catch (e) {}
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			window.gtag = gtag;
+			gtag('consent', 'default', {
+				'ad_storage': 'denied',
+				'ad_user_data': 'denied',
+				'ad_personalization': 'denied',
+				'analytics_storage': granted ? 'granted' : 'denied'
+			});
+			gtag('js', new Date());
+			gtag('config', 'G-SD849LC3MR', {
+				'allow_google_signals': false,
+				'allow_ad_personalization_signals': false
+			});
+		})();
 	</script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SD849LC3MR"></script>
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://mad.everydayapps.com/contact.html">
 	<meta property="og:title" content="Contact Support - MAD Designer">
-	<meta property="og:description" content="Get in touch with the MAD Designer team for support, feedback, or inquiries about connecting to MySQL and Microsoft SQL Server.">
+	<meta property="og:description" content="Get in touch with the MAD Designer team for support, feedback, or inquiries about connecting to PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, and SQLite.">
 	<meta property="og:image" content="https://mad.everydayapps.com/img/mad-designer-icon-1024.png">
 
 	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image">
-	<meta property="twitter:url" content="https://mad.everydayapps.com/contact.html">
-	<meta property="twitter:title" content="Contact Support - MAD Designer">
-	<meta property="twitter:description" content="Get in touch with the MAD Designer team for support, feedback, or inquiries about connecting to MySQL and Microsoft SQL Server.">
-	<meta property="twitter:image" content="https://mad.everydayapps.com/img/mad-designer-icon-1024.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:url" content="https://mad.everydayapps.com/contact.html">
+	<meta name="twitter:title" content="Contact Support - MAD Designer">
+	<meta name="twitter:description" content="Get in touch with the MAD Designer team for support, feedback, or inquiries about connecting to PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, and SQLite.">
+	<meta name="twitter:image" content="https://mad.everydayapps.com/img/mad-designer-icon-1024.png">
 
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
@@ -49,8 +66,8 @@
 		"name": "MAD Designer",
 		"operatingSystem": ["iOS", "macOS"],
 		"applicationCategory": "BusinessApplication",
-		"softwareVersion": "9.0.0",
-		"description": "MAD Designer for iOS connects to MySQL & Microsoft SQL Server, letting you design, view, and share custom business intelligence reports on the go.",
+		"softwareVersion": "9.1.0",
+		"description": "MAD Designer for iOS and macOS connects to PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, and SQLite, letting you design, view, and share custom business intelligence reports on the go.",
 		"url": "https://mad.everydayapps.com/",
 		"publisher": {
 			"@type": "Organization",
@@ -73,6 +90,8 @@
 			<nav>
 				<ul>
 					<li><a href="mad-file-type.html">.mad File Type</a></li>
+					<li><a href="https://docs.everydayapps.com/" target="_blank" rel="noopener">Docs</a></li>
+					<li><a href="https://github.com/mthomason/MAD" target="_blank" rel="noopener">GitHub</a></li>
 					<li><a href="contact.html">Contact</a></li>
 					<li><a href="privacy.html">Privacy</a></li>
 				</ul>
@@ -82,26 +101,36 @@
 
 	<main class="container form-page">
 		<h1>Contact Support</h1>
-		<p>Use the form below to contact us for help or feedback.</p>
+		<p>Use the form below to contact us for help or feedback. We use your email address only to reply.</p>
 		<form action="https://formspree.io/f/xpwylrga" method="POST">
+			<input type="hidden" name="_subject" value="MAD Designer support request">
+			<input type="hidden" name="_next" value="https://mad.everydayapps.com/thanks.html">
+			<input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
 			<label for="email">Your email:</label>
-			<input type="email" id="email" name="email" required>
+			<input type="email" id="email" name="email" autocomplete="email" required>
 
 			<label for="message">Your message:</label>
-			<textarea id="message" name="message" placeholder="Enter your message here..." required></textarea>
+			<textarea id="message" name="message" placeholder="Enter your message here..." minlength="10" required></textarea>
 
 			<button type="submit" class="btn">Send Message</button>
 		</form>
+		<p class="form-note">The form is delivered by <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree</a>; their servers process the message before it reaches us.</p>
 	</main>
 
 	<footer>
 		<div class="container">
-			<p>&copy; 2025 Everyday Apps LLC. All rights reserved.</p>
+			<p>&copy; 2025&ndash;2026 Everyday Apps LLC. All rights reserved.</p>
 			<nav>
-				<a href="contact.html">Contact</a> | <a href="privacy.html">Privacy</a>
+				<a href="https://docs.everydayapps.com/">Docs</a> |
+				<a href="https://github.com/mthomason/MAD">GitHub</a> |
+				<a href="contact.html">Contact</a> |
+				<a href="privacy.html">Privacy</a>
 			</nav>
 		</div>
 	</footer>
 
+	<script src="js/consent.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
