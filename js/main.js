@@ -22,11 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
 		const prevBtn = document.querySelector('.lightbox-prev');
 		const nextBtn = document.querySelector('.lightbox-next');
 		let currentIndex = 0;
+		let lastFocused = null;
+
+		function itemLabel(item) {
+			const caption = item.querySelector('p');
+			return caption ? caption.textContent.trim() : 'Gallery item';
+		}
 
 		function showItem(index) {
 			const item = galleryItems[index];
 			const type = item.getAttribute('data-type');
 			const source = item.getAttribute('data-source');
+			const label = itemLabel(item);
 
 			lightboxItemContainer.innerHTML = ''; // Clear previous item
 
@@ -35,23 +42,31 @@ document.addEventListener('DOMContentLoaded', () => {
 				video.src = source;
 				video.controls = true;
 				video.autoplay = true;
+				video.playsInline = true;
+				video.setAttribute('aria-label', item.querySelector('img')?.alt || 'App preview video');
 				lightboxItemContainer.appendChild(video);
 			} else if (type === 'image') {
 				const image = document.createElement('img');
 				image.src = source;
+				image.alt = item.querySelector('img')?.alt || label;
 				lightboxItemContainer.appendChild(image);
 			}
 		}
 
 		function openLightbox(index) {
+			lastFocused = document.activeElement;
 			currentIndex = index;
 			showItem(currentIndex);
 			lightbox.classList.add('active');
+			closeBtn.focus();
 		}
 
 		function closeLightbox() {
 			lightbox.classList.remove('active');
 			lightboxItemContainer.innerHTML = ''; // Stop video playback etc.
+			if (lastFocused && typeof lastFocused.focus === 'function') {
+				lastFocused.focus();
+			}
 		}
 
 		function showNextItem() {
@@ -65,8 +80,19 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 
 		galleryItems.forEach((item, index) => {
+			item.setAttribute('role', 'button');
+			item.setAttribute('tabindex', '0');
+			item.setAttribute('aria-label', 'Open ' + itemLabel(item));
+
 			item.addEventListener('click', () => {
 				openLightbox(index);
+			});
+
+			item.addEventListener('keydown', (event) => {
+				if (event.key === 'Enter' || event.key === ' ') {
+					event.preventDefault();
+					openLightbox(index);
+				}
 			});
 		});
 
@@ -87,11 +113,21 @@ document.addEventListener('DOMContentLoaded', () => {
 				showPrevItem();
 			} else if (e.key === 'Escape') {
 				closeLightbox();
+			} else if (e.key === 'Tab') {
+				const focusable = [closeBtn, prevBtn, nextBtn];
+				const current = focusable.indexOf(document.activeElement);
+				const delta = e.shiftKey ? -1 : 1;
+				focusable[(current + delta + focusable.length) % focusable.length].focus();
+				e.preventDefault();
 			}
 		});
 	}
 
 	function setupAnalytics() {
+		function isDocsLink(link) {
+			return link.href.indexOf('docs.everydayapps.com') !== -1;
+		}
+
 		// Sponsor Link
 		const sponsorLink = document.getElementById('sponsor-link');
 		if (sponsorLink) {
@@ -100,11 +136,29 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		}
 
+		// Links to the documentation site, wherever they appear
+		document.querySelectorAll('a[href*="docs.everydayapps.com"]').forEach(link => {
+			link.addEventListener('click', () => {
+				trackEvent('Docs', 'Click', link.textContent.trim());
+			});
+		});
+
+		// Hero Buttons
+		document.querySelectorAll('.hero-buttons a').forEach(link => {
+			link.addEventListener('click', () => {
+				if (!isDocsLink(link)) {
+					trackEvent('Hero', 'Click', link.textContent.trim());
+				}
+			});
+		});
+
 		// Navigation Links
 		const navLinks = document.querySelectorAll('header nav a');
 		navLinks.forEach(link => {
 			link.addEventListener('click', () => {
-				trackEvent('Navigation', 'Click', link.textContent);
+				if (!isDocsLink(link)) {
+					trackEvent('Navigation', 'Click', link.textContent.trim());
+				}
 			});
 		});
 
@@ -121,7 +175,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		const footerLinks = document.querySelectorAll('footer nav a');
 		footerLinks.forEach(link => {
 			link.addEventListener('click', () => {
-				trackEvent('Footer', 'Click', link.textContent);
+				if (!isDocsLink(link)) {
+					trackEvent('Footer', 'Click', link.textContent.trim());
+				}
 			});
 		});
 	}
