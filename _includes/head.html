@@ -4,6 +4,7 @@
 	<meta name="author" content="Everyday Apps LLC">
 	<meta name="publisher" content="Everyday Apps LLC">
 	{% seo %}
+	{% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
 	<link rel="alternate" hreflang="en" href="{{ en_url | absolute_url }}">
 	<link rel="alternate" hreflang="zh-CN" href="{{ chinese_url | absolute_url }}">
 	<link rel="alternate" hreflang="ja-JP" href="{{ japanese_url | absolute_url }}">
