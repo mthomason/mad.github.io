@@ -20,3 +20,7 @@ Icon?
 # Jekyll build output
 _site/
 .jekyll-cache/
+
+# Python bytecode
+__pycache__/
+*.pyc
