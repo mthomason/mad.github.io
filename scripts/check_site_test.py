@@ -61,6 +61,10 @@ class CheckSiteTest(unittest.TestCase):
 		self.write("sitemap.xml", "<urlset><url><loc>https://x/</loc></url><url><loc>https://x/</loc></url></urlset>")
 		self.assertEqual(check_site.sitemap_duplicates(str(self.root)), ["https://x/"])
 
+	def test_missing_sitemap_page_is_reported(self):
+		self.write("sitemap.xml", "<urlset><url><loc>https://x/</loc></url></urlset>")
+		self.assertIn("/contact.html", check_site.sitemap_missing(str(self.root)))
+
 
 if __name__ == "__main__":
 	unittest.main()

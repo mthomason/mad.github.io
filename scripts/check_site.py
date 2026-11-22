@@ -20,7 +20,7 @@ PAGES = ("index.html", "contact.html", "mad-file-type.html", "privacy.html", "th
 LINK_RE = re.compile(r"""(?:href|src)\s*=\s*(?:"([^"]*)"|'([^']*)')""")
 LOC_RE = re.compile(r"<loc>([^<]+)</loc>")
 
-Findings = namedtuple("Findings", "broken missing source_markdown sitemap_duplicates")
+Findings = namedtuple("Findings", "broken missing source_markdown sitemap_duplicates sitemap_missing")
 
 
 def _targets(path):
@@ -99,12 +99,28 @@ def sitemap_duplicates(site_root):
 	return sorted({location for location in locations if locations.count(location) > 1})
 
 
+def sitemap_missing(site_root, languages=LANGUAGES):
+	path = os.path.join(os.path.abspath(site_root), "sitemap.xml")
+	if not os.path.exists(path):
+		return ["sitemap.xml"]
+	with open(path, encoding="utf-8", errors="replace") as handle:
+		paths = {unquote(urlparse(location).path) for location in LOC_RE.findall(handle.read())}
+	expected = ["/", "/contact.html", "/mad-file-type.html", "/privacy.html"]
+	for language in languages:
+		expected.extend(
+			f"/{language}/{page}"
+			for page in ("", "contact.html", "mad-file-type.html", "privacy.html")
+		)
+	return [page for page in expected if page not in paths]
+
+
 def check_site(site_root, languages=LANGUAGES):
 	return Findings(
 		check_links(site_root),
 		missing_pages(site_root, languages),
 		source_markdown(site_root),
 		sitemap_duplicates(site_root),
+		sitemap_missing(site_root, languages),
 	)
 
 
@@ -119,6 +135,7 @@ def main(argv=None):
 		("missing", findings.missing),
 		("source-markdown", findings.source_markdown),
 		("sitemap-duplicates", findings.sitemap_duplicates),
+		("sitemap-missing", findings.sitemap_missing),
 	):
 		print(f"{name}: {len(values)}")
 		for value in values:
