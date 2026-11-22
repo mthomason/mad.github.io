@@ -9,11 +9,11 @@
 			</div>
 			<nav>
 				<ul>
-					<li><a href="mad-file-type.html">.mad File Type</a></li>
-					<li><a href="https://docs.everydayapps.com/" target="_blank" rel="noopener">Docs</a></li>
+					<li><a href="mad-file-type.html">{% if page_lang contains "zh" %}.mad 文件类型{% elsif page_lang contains "ja" %}.mad ファイル形式{% elsif page_lang contains "pt" %}Tipo de arquivo .mad{% elsif page_lang contains "de" %}.mad-Dateityp{% elsif page_lang contains "es" %}Tipo de archivo .mad{% else %}.mad File Type{% endif %}</a></li>
+					<li><a href="https://docs.everydayapps.com/" target="_blank" rel="noopener">{% if page_lang contains "zh" %}文档{% elsif page_lang contains "ja" %}ドキュメント{% elsif page_lang contains "pt" %}Documentação{% elsif page_lang contains "de" %}Dokumentation{% elsif page_lang contains "es" %}Documentación{% else %}Docs{% endif %}</a></li>
 					<li><a href="https://github.com/mthomason/MAD" target="_blank" rel="noopener">GitHub</a></li>
-					<li><a href="contact.html">Contact</a></li>
-					<li><a href="privacy.html">Privacy</a></li>
+					<li><a href="contact.html">{% if page_lang contains "zh" %}联系{% elsif page_lang contains "ja" %}お問い合わせ{% elsif page_lang contains "pt" %}Contato{% elsif page_lang contains "de" %}Kontakt{% elsif page_lang contains "es" %}Contacto{% else %}Contact{% endif %}</a></li>
+					<li><a href="privacy.html">{% if page_lang contains "zh" %}隐私{% elsif page_lang contains "ja" %}プライバシー{% elsif page_lang contains "pt" %}Privacidade{% elsif page_lang contains "de" %}Datenschutz{% elsif page_lang contains "es" %}Privacidad{% else %}Privacy{% endif %}</a></li>
 				</ul>
 				<div class="language-switch" role="navigation" aria-label="Language">
 					{% if page_lang contains "zh" %}

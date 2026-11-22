@@ -1,0 +1,27 @@
+---
+layout: default
+title: Support kontaktieren
+description: Nehmen Sie Kontakt mit dem MAD Designer-Team auf – für Support, Feedback oder Fragen zur Verbindung mit PostgreSQL, MySQL, MariaDB, Microsoft SQL Server und SQLite.
+image: /img/mad-designer-icon-1024.png
+keywords: contact, support, feedback, help, mad designer, mobile bi
+lang: de-DE
+---
+
+<main class="container form-page">
+		<h1>Support kontaktieren</h1>
+		<p>Nutzen Sie das untenstehende Formular, um uns um Hilfe oder Feedback zu bitten. Wir verwenden Ihre E-Mail-Adresse ausschließlich zur Beantwortung.</p>
+		<form action="https://formspree.io/f/xpwylrga" method="POST">
+			<input type="hidden" name="_subject" value="MAD Designer support request">
+			<input type="hidden" name="_next" value="https://mad.everydayapps.com/de/thanks.html">
+			<input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+			<label for="email">Ihre E-Mail-Adresse:</label>
+			<input type="email" id="email" name="email" autocomplete="email" required>
+
+			<label for="message">Ihre Nachricht:</label>
+			<textarea id="message" name="message" placeholder="Geben Sie hier Ihre Nachricht ein..." minlength="10" required></textarea>
+
+			<button type="submit" class="btn">Nachricht senden</button>
+		</form>
+		<p class="form-note">Das Formular wird von <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree</a> bereitgestellt; deren Server verarbeiten die Nachricht, bevor sie uns erreicht.</p>
+	</main>

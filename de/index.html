@@ -1,0 +1,171 @@
+---
+layout: default
+title: Designer für mobile Analyseberichte
+description: Open-Source-BI-Software für macOS, Windows und iOS. Entwerfen Sie Abfragen und Berichte für PostgreSQL, MySQL, MariaDB, SQL Server und SQLite.
+image: /img/mad-designer-icon-1024.png
+keywords: intelligence,bi,report,query,sql,server,database,mysql,postgresql,sqlite,macos,ios,enterprise,creator,maker,generator,db,data
+lang: de-DE
+---
+
+	<main>
+		<section class="hero">
+		<div class="container">
+			<h1>MAD Designer</h1>
+			<p class="hero-subheading">Open-Source-BI-Berichtsgenerator für macOS, Windows &amp; iOS</p>
+			<p>Entwerfen und teilen Sie individuelle Business-Intelligence-Berichte überall. Stellen Sie Verbindungen zu PostgreSQL, MySQL, MariaDB, Microsoft SQL Server und SQLite her; erstellen Sie Abfragen visuell oder in SQL und exportieren Sie nach PDF, HTML, CSV und JSON. Dieselbe Engine läuft headless unter Linux und Windows.</p>
+			<div class="app-store-container">
+				<div class="hero-buttons">
+					<a class="sponsor-button" href="{{ site.data.versions.release_base_url }}/MAD-Designer-macOS.dmg">Für macOS herunterladen (.dmg)</a>
+					<a class="sponsor-button" href="{{ site.data.versions.release_base_url }}/MAD-Designer-Windows-0.7.zip">Für Windows herunterladen (.zip)</a>
+					<a class="sponsor-button secondary-button" href="https://github.com/mthomason/MAD" target="_blank" rel="noopener">Quellcode auf GitHub ansehen</a>
+					<a class="sponsor-button secondary-button" href="https://docs.everydayapps.com/" target="_blank" rel="noopener">Dokumentation &amp; Anleitungen</a>
+					<a id="sponsor-link" class="sponsor-button accent-button" href="https://github.com/sponsors/mthomason" target="_blank" rel="noopener">App-Store-Neustart unterstützen</a>
+				</div>
+				<p class="app-availability-text">Installation über Homebrew: <code>brew install --cask mthomason/tap/mad-designer</code> &bull; Beispielberichte: <a href="{{ site.data.versions.release_base_url }}/London.mad" style="color: #ffffff; text-decoration: underline;">London.mad</a> &middot; <a href="{{ site.data.versions.release_base_url }}/Music.mad" style="color: #ffffff; text-decoration: underline;">Music.mad</a></p>
+				<p class="app-availability-text">Version: App {{ site.data.versions.macos_app_version }} / Engine {{ site.data.versions.engine_version }} ({{ site.data.versions.engine_revision }}). Die Desktop-Builds sind nicht signiert; unter Windows wird SmartScreen nachfragen — wählen Sie „Weitere Informationen“ → „Trotzdem ausführen“ (siehe die <a href="https://docs.everydayapps.com/windows.html" style="color: #ffffff; text-decoration: underline;">Windows-Anleitung</a>).</p>
+				<p class="app-availability-text">Die Benutzeroberfläche der Anwendung ist in Englisch, vereinfachtem Chinesisch, Japanisch, brasilianischem Portugiesisch, Deutsch und lateinamerikanischem Spanisch verfügbar. Die Übersetzungen sind maschinell unterstützt und können Fehler enthalten; melden Sie diese bitte im <a href="https://github.com/mthomason/MAD/issues" style="color: #ffffff; text-decoration: underline;">Issue-Tracker</a>.</p>
+				<p class="app-availability-text">Die iOS-App kehrt Anfang 2027 in den App Store zurück. Sponsoren finanzieren die Entwicklung und den Neustart.</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="features">
+		<div class="container">
+			<h2>Hauptfunktionen</h2>
+			<div class="feature-grid">
+				<div class="feature">
+					<div class="feature-icon-background">
+						<img src="{{ '/img/icon-database96x64.png' | relative_url }}" alt="Datenbank-Symbol" class="feature-icon">
+					</div>
+					<h3>Mit Ihren Datenbanken verbinden</h3>
+					<p>Stellen Sie sichere Verbindungen zu PostgreSQL-, MySQL-, MariaDB-, Microsoft SQL Server- und SQLite-Datenbanken her.</p>
+				</div>
+				<div class="feature">
+					<div class="feature-icon-background">
+						<img src="{{ '/img/icon-designer96x64.png' | relative_url }}" alt="Abfrage-Designer-Symbol" class="feature-icon">
+					</div>
+					<h3>Leistungsstarker Abfrage-Designer</h3>
+					<p>Erstellen Sie Ad-hoc-Abfragen mit mehreren Tabellen, Joins, Gruppierungen und Filtern, um genau die Daten zu erhalten, die Sie benötigen.</p>
+				</div>
+				<div class="feature">
+					<div class="feature-icon-background">
+						<img src="{{ '/img/icon-viewer96x64.png' | relative_url }}" alt="Berichts-Designer-Symbol" class="feature-icon">
+					</div>
+					<h3>Umfangreicher Berichts-Designer</h3>
+					<p>Erstellen Sie ansprechende Berichte mit Datenbeschriftungen, Bildern, Zusammenfassungen und benutzerdefinierter Formatierung.</p>
+				</div>
+				<div class="feature">
+					<div class="feature-icon-background">
+						<img src="{{ '/img/icon-share96x96.png' | relative_url }}" alt="Teilen-Symbol" class="feature-icon">
+					</div>
+					<h3>Teilen &amp; Exportieren</h3>
+					<p>Teilen Sie interaktive Berichte mit Kollegen oder exportieren Sie sie als PDFs für eine breite Verteilung.</p>
+				</div>
+				<div class="feature">
+					<h3>Headless-Engine &amp; CLI</h3>
+					<p>Dieselbe Engine läuft über die <code>mad</code>-CLI unter Linux und Windows und über <code>mad-action</code> in CI.</p>
+				</div>
+				<div class="feature">
+					<h3>Offenes <code>.mad</code>-Format</h3>
+					<p>Eine <code>.mad</code>-Datei enthält das Schema, die Abfrage und das Layout in einem portablen Dokument mit offener Spezifikation.</p>
+				</div>
+				<div class="feature">
+					<h3>Sechs UI-Sprachen</h3>
+					<p>Englisch, vereinfachtes Chinesisch, Japanisch, brasilianisches Portugiesisch, Deutsch und lateinamerikanisches Spanisch. Die Übersetzungen sind maschinell unterstützt.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="gallery">
+		<div class="container">
+			<h2>In Aktion erleben</h2>
+			<div class="gallery-container">
+				<div class="gallery-item" data-type="video" data-source="{{ '/img/app-preview.mp4' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-00.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="App-Vorschauvideo">
+					<div class="play-icon"></div>
+					<p>App-Vorschau</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-00.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-00.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="Ein Screenshot des Datei-Explorers, der einige Beispielberichte zeigt.">
+					<p>Der Datei-Explorer mit den verfügbaren Beispielberichten.</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-01.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-01.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="Ein Screenshot zum Erstellen eines neuen Berichts. Er zeigt einen Bildschirm zur Auswahl einer Datenquelle.">
+					<p>Wählen Sie eine Datenquelle, um einen neuen Bericht zu erstellen.</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-02.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-02.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="Ein Screenshot des Abfrage-Designers.">
+					<p>Der leistungsstarke und intuitive Abfrage-Designer.</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-03.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-03.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="Ein Querformat-Screenshot des Abfrage-Designers.">
+					<p>Eine Querformatansicht des Abfrage-Designers für komplexere Abfragen.</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-04.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-04.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="Ein Screenshot des Berichts-Designers.">
+					<p>Der Berichts-Designer, in dem Sie Ihre Daten zum Leben erwecken.</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-05.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-05.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="Ein Screenshot des Berichts-Designers, der zeigt, wie ein Benutzer einem Datenfeld eine Formatierung hinzufügt.">
+					<p>Wenden Sie ganz einfach Formatierungen auf jedes Datenfeld in Ihrem Bericht an.</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-06.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-06.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="Ein Screenshot, der zeigt, wie ein neues Datenfeld für den Berichts-Designer ausgewählt wird, mit Optionen für Datenbeschriftung, statische Beschriftung, Aggregat, Bild und Leerraum.">
+					<p>Wählen Sie aus verschiedenen Datenfeldtypen, um Ihren Bericht zu erstellen.</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-07.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-07.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="Ein Screenshot eines Beispielberichts.">
+					<p>Ein fertiger Beispielbericht, bereit zum Teilen.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="audience">
+		<div class="container">
+			<h2>Für Profis entwickelt</h2>
+			<div class="audience-grid">
+				<div class="audience-item">
+					<h3>Business-Analysten</h3>
+					<p>Verwandeln Sie Rohdaten in klare, umsetzbare Erkenntnisse, um Geschäftsentscheidungen voranzutreiben.</p>
+				</div>
+				<div class="audience-item">
+					<h3>Datenfachleute &amp; Entwickler</h3>
+					<p>Testen Sie schnell Datenbankverbindungen, führen Sie Abfragen aus und bieten Sie Endbenutzern Datenlösungen.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="audience">
+		<div class="container">
+			<h2>Auf MAD aufbauen</h2>
+			<div class="audience-grid">
+				<div class="audience-item">
+					<h3><a href="https://docs.everydayapps.com/developers/">Den Kontrakt lesen</a></h3>
+					<p>Die Format-Spezifikation, das Datenobjekt-Design und die Entwicklerhandbücher.</p>
+				</div>
+				<div class="audience-item">
+					<h3><a href="https://docs.everydayapps.com/developers/cli.html">Headless ausführen</a></h3>
+					<p>Die <code>mad</code>-CLI und <a href="https://github.com/mthomason/mad-action">mad-action</a> führen einen eingecheckten Bericht ohne UI aus.</p>
+				</div>
+				<div class="audience-item">
+					<h3><a href="https://github.com/mthomason/MAD">Mitwirken</a></h3>
+					<p>Quellcode, Issues und der Leitfaden für Mitwirkende sind auf GitHub.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	</main>
+
+	<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot-Betrachter">
+		<button type="button" class="lightbox-close" aria-label="Schließen">&times;</button>
+		<div class="lightbox-content">
+			<div class="lightbox-item-container">
+				<!-- Injected by JS -->
+			</div>
+			<button type="button" class="lightbox-prev" aria-label="Zurück">&#10094;</button>
+			<button type="button" class="lightbox-next" aria-label="Weiter">&#10095;</button>
+		</div>
+	</div>
