@@ -71,6 +71,30 @@ header nav a:hover {
 	color: #DC2448; /* Accent Color */
 }
 
+header .language-switch {
+	margin-top: 8px;
+	font-size: 0.8rem;
+	text-align: right;
+	line-height: 1.6;
+}
+
+header .language-switch a,
+header .language-switch span {
+	color: #666;
+	margin-left: 8px;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+header .language-switch a:hover {
+	color: #DC2448;
+}
+
+header .language-switch [aria-current="page"] {
+	color: #0AA0D5;
+	font-weight: bold;
+}
+
 /* Hero Section */
 .hero {
 	position: relative;

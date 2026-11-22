@@ -29,22 +29,12 @@
 	}
 
 	function showBanner() {
-		if (document.getElementById('analytics-consent')) {
+		var banner = document.getElementById('analytics-consent');
+		if (!banner) {
 			return;
 		}
 
-		var banner = document.createElement('div');
-		banner.id = 'analytics-consent';
-		banner.className = 'analytics-consent';
-		banner.setAttribute('role', 'region');
-		banner.setAttribute('aria-label', 'Analytics cookies');
-		banner.innerHTML = '<p>This site uses Google Analytics to understand how the site is used. You can accept or decline analytics cookies.</p>' +
-			'<div class="analytics-consent-actions">' +
-			'<button type="button" data-consent="granted">Accept</button>' +
-			'<button type="button" data-consent="denied">Decline</button>' +
-			'</div>';
-		document.body.appendChild(banner);
-
+		banner.hidden = false;
 		banner.addEventListener('click', function (event) {
 			var button = event.target.closest('[data-consent]');
 			if (!button) {
