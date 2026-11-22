@@ -1,0 +1,171 @@
+---
+layout: default
+title: モバイル分析ドキュメントデザイナー
+description: macOS、Windows、iOS 向けのオープンソース BI ソフトウェア。PostgreSQL、MySQL、MariaDB、SQL Server、SQLite に対してクエリとレポートを設計できます。
+image: /img/mad-designer-icon-1024.png
+keywords: intelligence,bi,report,query,sql,server,database,mysql,postgresql,sqlite,macos,ios,enterprise,creator,maker,generator,db,data
+lang: ja-JP
+---
+
+	<main>
+		<section class="hero">
+		<div class="container">
+			<h1>MAD Designer</h1>
+			<p class="hero-subheading">macOS、Windows、iOS 向けのオープンソース BI レポートビルダー</p>
+			<p>カスタムのビジネスインテリジェンスレポートをどこでも設計・共有できます。PostgreSQL、MySQL、MariaDB、Microsoft SQL Server、SQLite に接続し、クエリをビジュアルまたは SQL で作成し、PDF、HTML、CSV、JSON にエクスポートできます。同じエンジンは Linux と Windows でヘッドレスでも動作します。</p>
+			<div class="app-store-container">
+				<div class="hero-buttons">
+					<a class="sponsor-button" href="{{ site.data.versions.release_base_url }}/MAD-Designer-macOS.dmg">macOS 版をダウンロード（.dmg）</a>
+					<a class="sponsor-button" href="{{ site.data.versions.release_base_url }}/MAD-Designer-Windows-0.7.zip">Windows 版をダウンロード（.zip）</a>
+					<a class="sponsor-button secondary-button" href="https://github.com/mthomason/MAD" target="_blank" rel="noopener">GitHub でソースを見る</a>
+					<a class="sponsor-button secondary-button" href="https://docs.everydayapps.com/" target="_blank" rel="noopener">ドキュメントとガイド</a>
+					<a id="sponsor-link" class="sponsor-button accent-button" href="https://github.com/sponsors/mthomason" target="_blank" rel="noopener">App Store 復帰を支援する</a>
+				</div>
+				<p class="app-availability-text">Homebrew でインストール: <code>brew install --cask mthomason/tap/mad-designer</code> &bull; サンプルレポート: <a href="{{ site.data.versions.release_base_url }}/London.mad" style="color: #ffffff; text-decoration: underline;">London.mad</a> &middot; <a href="{{ site.data.versions.release_base_url }}/Music.mad" style="color: #ffffff; text-decoration: underline;">Music.mad</a></p>
+				<p class="app-availability-text">バージョン: アプリ {{ site.data.versions.macos_app_version }} / エンジン {{ site.data.versions.engine_version }}（{{ site.data.versions.engine_revision }}）。デスクトップ版は署名されていないため、Windows では SmartScreen が確認を求めます —「詳細情報」→「実行」を選択してください（<a href="https://docs.everydayapps.com/windows.html" style="color: #ffffff; text-decoration: underline;">Windows ガイド</a>を参照）。</p>
+				<p class="app-availability-text">アプリケーションの UI は、英語、簡体字中国語、日本語、ブラジルポルトガル語、ドイツ語、ラテンアメリカスペイン語で利用できます。翻訳は機械支援によるもので、誤りを含む場合があります。誤りは<a href="https://github.com/mthomason/MAD/issues" style="color: #ffffff; text-decoration: underline;">課題トラッカー</a>で報告してください。</p>
+				<p class="app-availability-text">iOS App Store でのリリースは 2027 年初頭に再開されます。スポンサーが開発と復帰を資金面で支えています。</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="features">
+		<div class="container">
+			<h2>主な機能</h2>
+			<div class="feature-grid">
+				<div class="feature">
+					<div class="feature-icon-background">
+						<img src="{{ '/img/icon-database96x64.png' | relative_url }}" alt="データベースのアイコン" class="feature-icon">
+					</div>
+					<h3>データベースに接続</h3>
+					<p>PostgreSQL、MySQL、MariaDB、Microsoft SQL Server、SQLite のデータベースに安全に接続できます。</p>
+				</div>
+				<div class="feature">
+					<div class="feature-icon-background">
+						<img src="{{ '/img/icon-designer96x64.png' | relative_url }}" alt="クエリデザイナーのアイコン" class="feature-icon">
+					</div>
+					<h3>強力なクエリデザイナー</h3>
+					<p>複数のテーブル、結合、グループ化、フィルターを使ってアドホッククエリを作成し、必要なデータを正確に取得できます。</p>
+				</div>
+				<div class="feature">
+					<div class="feature-icon-background">
+						<img src="{{ '/img/icon-viewer96x64.png' | relative_url }}" alt="レポートデザイナーのアイコン" class="feature-icon">
+					</div>
+					<h3>充実したレポートデザイナー</h3>
+					<p>データラベル、画像、集計、カスタム書式を使って美しいレポートを作成できます。</p>
+				</div>
+				<div class="feature">
+					<div class="feature-icon-background">
+						<img src="{{ '/img/icon-share96x96.png' | relative_url }}" alt="共有のアイコン" class="feature-icon">
+					</div>
+					<h3>共有とエクスポート</h3>
+					<p>インタラクティブなレポートを同僚と共有したり、PDF としてエクスポートして広く配布したりできます。</p>
+				</div>
+				<div class="feature">
+					<h3>ヘッドレスエンジンと CLI</h3>
+					<p>同じエンジンが <code>mad</code> CLI を通じて Linux と Windows で、また CI では <code>mad-action</code> を通じて動作します。</p>
+				</div>
+				<div class="feature">
+					<h3>オープンな <code>.mad</code> 形式</h3>
+					<p><code>.mad</code> ファイルは、スキーマ、クエリ、レイアウトを 1 つのポータブルなドキュメントに収め、仕様は公開されています。</p>
+				</div>
+				<div class="feature">
+					<h3>6 つの UI 言語</h3>
+					<p>英語、簡体字中国語、日本語、ブラジルポルトガル語、ドイツ語、ラテンアメリカスペイン語。翻訳は機械支援によるものです。</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="gallery">
+		<div class="container">
+			<h2>実際の画面を見る</h2>
+			<div class="gallery-container">
+				<div class="gallery-item" data-type="video" data-source="{{ '/img/app-preview.mp4' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-00.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="アプリプレビュー動画">
+					<div class="play-icon"></div>
+					<p>アプリプレビュー</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-00.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-00.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="サンプルレポートが表示されたファイルエクスプローラーのスクリーンショット。">
+					<p>利用可能なサンプルレポートが表示されたファイルエクスプローラー。</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-01.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-01.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="新しいレポートを作成する方法のスクリーンショット。データソースを選択する画面が表示されています。">
+					<p>データソースを選択して新しいレポートを作成します。</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-02.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-02.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="クエリデザイナーのスクリーンショット。">
+					<p>強力で直感的なクエリデザイナー。</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-03.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-03.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="クエリデザイナーの横向きスクリーンショット。">
+					<p>より複雑なクエリのための、クエリデザイナーの横向き表示。</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-04.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-04.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="レポートデザイナーのスクリーンショット。">
+					<p>データを活かすレポートデザイナー。</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-05.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-05.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="ユーザーがデータフィールドに書式を追加している様子を示すレポートデザイナーのスクリーンショット。">
+					<p>レポート内の任意のデータフィールドに簡単に書式を適用できます。</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-06.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-06.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="レポートデザイナー用に新しいデータフィールドを選択する方法を示すスクリーンショット。データラベル、静的ラベル、集計、画像、空白のオプションがあります。">
+					<p>さまざまなデータフィールドタイプから選択してレポートを作成します。</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-07.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-07.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="サンプルレポートのスクリーンショット。">
+					<p>共有できる状態に完成したサンプルレポート。</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="audience">
+		<div class="container">
+			<h2>プロフェッショナルのために設計</h2>
+			<div class="audience-grid">
+				<div class="audience-item">
+					<h3>ビジネスアナリスト</h3>
+					<p>生データを明確で実用的な洞察に変換し、ビジネス上の意思決定を推進します。</p>
+				</div>
+				<div class="audience-item">
+					<h3>データプロフェッショナルと開発者</h3>
+					<p>データベース接続をすばやくテストし、クエリを実行し、エンドユーザーにデータソリューションを提供します。</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="audience">
+		<div class="container">
+			<h2>MAD の上に構築</h2>
+			<div class="audience-grid">
+				<div class="audience-item">
+					<h3><a href="https://docs.everydayapps.com/developers/">契約を読む</a></h3>
+					<p>形式仕様、データオブジェクトの設計、開発者ガイド。</p>
+				</div>
+				<div class="audience-item">
+					<h3><a href="https://docs.everydayapps.com/developers/cli.html">ヘッドレスで実行</a></h3>
+					<p><code>mad</code> CLI と <a href="https://github.com/mthomason/mad-action">mad-action</a> は、UI なしでチェックイン済みのレポートを実行します。</p>
+				</div>
+				<div class="audience-item">
+					<h3><a href="https://github.com/mthomason/MAD">貢献する</a></h3>
+					<p>ソース、Issue、コントリビューションガイドは GitHub にあります。</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	</main>
+
+	<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="スクリーンショットビューアー">
+		<button type="button" class="lightbox-close" aria-label="閉じる">&times;</button>
+		<div class="lightbox-content">
+			<div class="lightbox-item-container">
+				<!-- Injected by JS -->
+			</div>
+			<button type="button" class="lightbox-prev" aria-label="前へ">&#10094;</button>
+			<button type="button" class="lightbox-next" aria-label="次へ">&#10095;</button>
+		</div>
+	</div>
