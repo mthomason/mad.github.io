@@ -1,0 +1,40 @@
+title: MAD Designer
+description: >-
+  Open-source business intelligence and report designer for macOS, Windows,
+  and iOS. Connect to PostgreSQL, MySQL, MariaDB, SQL Server, and SQLite.
+url: https://mad.everydayapps.com
+author: Everyday Apps LLC
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - AGENTS.md
+  - "*.md"
+  - scripts
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      lang: en
+  - scope:
+      path: "zh"
+    values:
+      lang: zh-CN
+  - scope:
+      path: "ja"
+    values:
+      lang: ja-JP
+  - scope:
+      path: "pt-br"
+    values:
+      lang: pt-BR
+  - scope:
+      path: "de"
+    values:
+      lang: de-DE
+  - scope:
+      path: "es"
+    values:
+      lang: es-419
