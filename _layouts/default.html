@@ -1,5 +1,33 @@
+{%- assign page_lang = page.lang | default: "en" -%}
+{%- assign lang_root = "" -%}
+{%- if page_lang contains "zh" -%}{%- assign lang_root = "/zh" -%}
+{%- elsif page_lang contains "ja" -%}{%- assign lang_root = "/ja" -%}
+{%- elsif page_lang contains "pt" -%}{%- assign lang_root = "/pt-br" -%}
+{%- elsif page_lang contains "de" -%}{%- assign lang_root = "/de" -%}
+{%- elsif page_lang contains "es" -%}{%- assign lang_root = "/es" -%}
+{%- endif -%}
+{%- assign base_url = page.url -%}
+{%- if lang_root != "" -%}{%- assign base_url = page.url | remove_first: lang_root -%}{%- endif -%}
+{%- assign en_candidate = base_url -%}
+{%- assign chinese_candidate = "/zh" | append: base_url -%}
+{%- assign japanese_candidate = "/ja" | append: base_url -%}
+{%- assign portuguese_candidate = "/pt-br" | append: base_url -%}
+{%- assign german_candidate = "/de" | append: base_url -%}
+{%- assign spanish_candidate = "/es" | append: base_url -%}
+{%- assign en_match = site.pages | where: "url", en_candidate | first -%}
+{%- assign chinese_match = site.pages | where: "url", chinese_candidate | first -%}
+{%- assign japanese_match = site.pages | where: "url", japanese_candidate | first -%}
+{%- assign portuguese_match = site.pages | where: "url", portuguese_candidate | first -%}
+{%- assign german_match = site.pages | where: "url", german_candidate | first -%}
+{%- assign spanish_match = site.pages | where: "url", spanish_candidate | first -%}
+{%- if en_match -%}{%- assign en_url = en_candidate -%}{%- else -%}{%- assign en_url = "/" -%}{%- endif -%}
+{%- if chinese_match -%}{%- assign chinese_url = chinese_candidate -%}{%- else -%}{%- assign chinese_url = "/zh/" -%}{%- endif -%}
+{%- if japanese_match -%}{%- assign japanese_url = japanese_candidate -%}{%- else -%}{%- assign japanese_url = "/ja/" -%}{%- endif -%}
+{%- if portuguese_match -%}{%- assign portuguese_url = portuguese_candidate -%}{%- else -%}{%- assign portuguese_url = "/pt-br/" -%}{%- endif -%}
+{%- if german_match -%}{%- assign german_url = german_candidate -%}{%- else -%}{%- assign german_url = "/de/" -%}{%- endif -%}
+{%- if spanish_match -%}{%- assign spanish_url = spanish_candidate -%}{%- else -%}{%- assign spanish_url = "/es/" -%}{%- endif -%}
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: 'en' }}">
+<html lang="{{ page_lang }}">
 <head>
 {% include head.html %}
 {% include analytics.html %}
@@ -11,6 +39,8 @@
 {{ content }}
 
 {% include footer.html %}
+
+{% include consent.html %}
 
 	<script src="{{ '/js/consent.js' | relative_url }}"></script>
 	<script src="{{ '/js/main.js' | relative_url }}"></script>

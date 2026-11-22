@@ -4,6 +4,14 @@
 	<meta name="author" content="Everyday Apps LLC">
 	<meta name="publisher" content="Everyday Apps LLC">
 	{% seo %}
+	<link rel="alternate" hreflang="en" href="{{ en_url | absolute_url }}">
+	<link rel="alternate" hreflang="zh-CN" href="{{ chinese_url | absolute_url }}">
+	<link rel="alternate" hreflang="ja-JP" href="{{ japanese_url | absolute_url }}">
+	<link rel="alternate" hreflang="pt-BR" href="{{ portuguese_url | absolute_url }}">
+	<link rel="alternate" hreflang="de-DE" href="{{ german_url | absolute_url }}">
+	<link rel="alternate" hreflang="es-419" href="{{ spanish_url | absolute_url }}">
+	<link rel="alternate" hreflang="es" href="{{ spanish_url | absolute_url }}">
+	<link rel="alternate" hreflang="x-default" href="{{ en_url | absolute_url }}">
 	{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 
 	<link rel="preload" href="{{ '/css/style.css' | relative_url }}" as="style">
