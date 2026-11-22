@@ -1,0 +1,171 @@
+---
+layout: default
+title: 移动分析文档设计器
+description: 适用于 macOS、Windows 和 iOS 的开源 BI 软件。针对 PostgreSQL、MySQL、MariaDB、SQL Server 和 SQLite 设计查询和报表。
+image: /img/mad-designer-icon-1024.png
+keywords: intelligence,bi,report,query,sql,server,database,mysql,postgresql,sqlite,macos,ios,enterprise,creator,maker,generator,db,data
+lang: zh-CN
+---
+
+	<main>
+		<section class="hero">
+		<div class="container">
+			<h1>MAD Designer</h1>
+			<p class="hero-subheading">适用于 macOS、Windows 和 iOS 的开源 BI 报表构建工具</p>
+			<p>随时随地设计和共享自定义商业智能报表。连接 PostgreSQL、MySQL、MariaDB、Microsoft SQL Server 和 SQLite；以可视化方式或使用 SQL 构建查询；并导出为 PDF、HTML、CSV 和 JSON。同一引擎可在 Linux 和 Windows 上以无头方式运行。</p>
+			<div class="app-store-container">
+				<div class="hero-buttons">
+					<a class="sponsor-button" href="{{ site.data.versions.release_base_url }}/MAD-Designer-macOS.dmg">下载 macOS 版（.dmg）</a>
+					<a class="sponsor-button" href="{{ site.data.versions.release_base_url }}/MAD-Designer-Windows-0.7.zip">下载 Windows 版（.zip）</a>
+					<a class="sponsor-button secondary-button" href="https://github.com/mthomason/MAD" target="_blank" rel="noopener">在 GitHub 上查看源代码</a>
+					<a class="sponsor-button secondary-button" href="https://docs.everydayapps.com/" target="_blank" rel="noopener">文档与指南</a>
+					<a id="sponsor-link" class="sponsor-button accent-button" href="https://github.com/sponsors/mthomason" target="_blank" rel="noopener">赞助 App Store 重新上架</a>
+				</div>
+				<p class="app-availability-text">通过 Homebrew 安装：<code>brew install --cask mthomason/tap/mad-designer</code> &bull; 示例报表：<a href="{{ site.data.versions.release_base_url }}/London.mad" style="color: #ffffff; text-decoration: underline;">London.mad</a> &middot; <a href="{{ site.data.versions.release_base_url }}/Music.mad" style="color: #ffffff; text-decoration: underline;">Music.mad</a></p>
+				<p class="app-availability-text">版本：应用 {{ site.data.versions.macos_app_version }} / 引擎 {{ site.data.versions.engine_version }}（{{ site.data.versions.engine_revision }}）。桌面版构建未签名；在 Windows 上，SmartScreen 会发出询问——请选择“更多信息”→“仍要运行”（参见 <a href="https://docs.everydayapps.com/windows.html" style="color: #ffffff; text-decoration: underline;">Windows 指南</a>）。</p>
+				<p class="app-availability-text">应用程序界面提供英语、简体中文、日语、巴西葡萄牙语、德语和拉丁美洲西班牙语版本。翻译为机器辅助完成，可能包含错误；请在<a href="https://github.com/mthomason/MAD/issues" style="color: #ffffff; text-decoration: underline;">问题跟踪器</a>中报告。</p>
+				<p class="app-availability-text">iOS App Store 版本将于 2027 年初回归。赞助者资助开发和重新上架。</p>
+			</div>
+		</div>
+	</section>
+
+	<section class="features">
+		<div class="container">
+			<h2>主要功能</h2>
+			<div class="feature-grid">
+				<div class="feature">
+					<div class="feature-icon-background">
+						<img src="{{ '/img/icon-database96x64.png' | relative_url }}" alt="数据库图标" class="feature-icon">
+					</div>
+					<h3>连接您的数据库</h3>
+					<p>安全连接至 PostgreSQL、MySQL、MariaDB、Microsoft SQL Server 和 SQLite 数据库。</p>
+				</div>
+				<div class="feature">
+					<div class="feature-icon-background">
+						<img src="{{ '/img/icon-designer96x64.png' | relative_url }}" alt="查询设计器图标" class="feature-icon">
+					</div>
+					<h3>强大的查询设计器</h3>
+					<p>使用多表、连接、分组和筛选器构建即席查询，获取您所需的确切数据。</p>
+				</div>
+				<div class="feature">
+					<div class="feature-icon-background">
+						<img src="{{ '/img/icon-viewer96x64.png' | relative_url }}" alt="报表设计器图标" class="feature-icon">
+					</div>
+					<h3>丰富的报表设计器</h3>
+					<p>使用数据标签、图像、汇总和自定义格式创建精美的报表。</p>
+				</div>
+				<div class="feature">
+					<div class="feature-icon-background">
+						<img src="{{ '/img/icon-share96x96.png' | relative_url }}" alt="共享图标" class="feature-icon">
+					</div>
+					<h3>共享与导出</h3>
+					<p>与同事共享交互式报表，或将其导出为 PDF 以便广泛分发。</p>
+				</div>
+				<div class="feature">
+					<h3>无头引擎与 CLI</h3>
+					<p>同一引擎通过 <code>mad</code> CLI 在 Linux 和 Windows 上运行，并通过 <code>mad-action</code> 在 CI 中运行。</p>
+				</div>
+				<div class="feature">
+					<h3>开放的 <code>.mad</code> 格式</h3>
+					<p><code>.mad</code> 文件将模式、查询和布局保存在一个具有开放规范的便携式文档中。</p>
+				</div>
+				<div class="feature">
+					<h3>六种界面语言</h3>
+					<p>英语、简体中文、日语、巴西葡萄牙语、德语和拉丁美洲西班牙语。翻译为机器辅助完成。</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="gallery">
+		<div class="container">
+			<h2>实际效果</h2>
+			<div class="gallery-container">
+				<div class="gallery-item" data-type="video" data-source="{{ '/img/app-preview.mp4' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-00.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="应用预览视频">
+					<div class="play-icon"></div>
+					<p>应用预览</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-00.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-00.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="文件浏览器的截图，显示了一些示例报表。">
+					<p>文件浏览器，显示可用的示例报表。</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-01.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-01.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="创建新报表的截图。其中显示了选择数据源的界面。">
+					<p>选择数据源以创建新报表。</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-02.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-02.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="查询设计器的截图。">
+					<p>强大而直观的查询设计器。</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-03.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-03.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="查询设计器的横向截图。">
+					<p>用于更复杂查询的查询设计器横向视图。</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-04.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-04.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="报表设计器的截图。">
+					<p>报表设计器，让您的数据栩栩如生。</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-05.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-05.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="报表设计器的截图，显示用户正在为数据字段添加格式。">
+					<p>轻松为报表中的任何数据字段应用格式。</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-06.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-06.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="显示如何为报表设计器选择新数据字段的截图，其中包含数据标签、静态标签、聚合、图像和空白选项。">
+					<p>从各种数据字段类型中选择以构建报表。</p>
+				</div>
+				<div class="gallery-item" data-type="image" data-source="{{ '/img/screenshot-07.png' | relative_url }}">
+					<img src="{{ '/img/thumbs/screenshot-07.jpg' | relative_url }}" width="250" height="150" loading="lazy" decoding="async" alt="示例报表的截图。">
+					<p>已完成的示例报表，可供共享。</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="audience">
+		<div class="container">
+			<h2>专为专业人士打造</h2>
+			<div class="audience-grid">
+				<div class="audience-item">
+					<h3>业务分析师</h3>
+					<p>将原始数据转化为清晰、可操作的洞察，以推动业务决策。</p>
+				</div>
+				<div class="audience-item">
+					<h3>数据专业人士与开发者</h3>
+					<p>快速测试数据库连接、运行查询，并为最终用户提供数据解决方案。</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="audience">
+		<div class="container">
+			<h2>基于 MAD 构建</h2>
+			<div class="audience-grid">
+				<div class="audience-item">
+					<h3><a href="https://docs.everydayapps.com/developers/">阅读契约</a></h3>
+					<p>格式规范、数据对象设计和开发者指南。</p>
+				</div>
+				<div class="audience-item">
+					<h3><a href="https://docs.everydayapps.com/developers/cli.html">以无头方式运行</a></h3>
+					<p><code>mad</code> CLI 和 <a href="https://github.com/mthomason/mad-action">mad-action</a> 无需界面即可运行已检入的报表。</p>
+				</div>
+				<div class="audience-item">
+					<h3><a href="https://github.com/mthomason/MAD">贡献</a></h3>
+					<p>源代码、问题和贡献指南均在 GitHub 上。</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	</main>
+
+	<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="截图查看器">
+		<button type="button" class="lightbox-close" aria-label="关闭">&times;</button>
+		<div class="lightbox-content">
+			<div class="lightbox-item-container">
+				<!-- Injected by JS -->
+			</div>
+			<button type="button" class="lightbox-prev" aria-label="上一个">&#10094;</button>
+			<button type="button" class="lightbox-next" aria-label="下一个">&#10095;</button>
+		</div>
+	</div>

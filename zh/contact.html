@@ -1,0 +1,27 @@
+---
+layout: default
+title: 联系支持
+description: 联系 MAD Designer 团队，获取支持、提供反馈，或咨询有关连接 PostgreSQL、MySQL、MariaDB、Microsoft SQL Server 和 SQLite 的问题。
+image: /img/mad-designer-icon-1024.png
+keywords: contact, support, feedback, help, mad designer, mobile bi
+lang: zh-CN
+---
+
+<main class="container form-page">
+		<h1>联系支持</h1>
+		<p>使用下方表单联系我们以获取帮助或提供反馈。我们仅使用您的电子邮件地址进行回复。</p>
+		<form action="https://formspree.io/f/xpwylrga" method="POST">
+			<input type="hidden" name="_subject" value="MAD Designer support request">
+			<input type="hidden" name="_next" value="https://mad.everydayapps.com/zh/thanks.html">
+			<input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+			<label for="email">您的电子邮件：</label>
+			<input type="email" id="email" name="email" autocomplete="email" required>
+
+			<label for="message">您的消息：</label>
+			<textarea id="message" name="message" placeholder="在此输入您的消息……" minlength="10" required></textarea>
+
+			<button type="submit" class="btn">发送消息</button>
+		</form>
+		<p class="form-note">表单由 <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree</a> 提供；其服务器在消息送达我们之前对其进行处理。</p>
+	</main>
