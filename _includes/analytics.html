@@ -1,0 +1,24 @@
+	<!-- Google tag (gtag.js) with Consent Mode v2; the banner is in js/consent.js -->
+	<script>
+		(function () {
+			var granted = false;
+			try {
+				granted = window.localStorage.getItem('mad-analytics-consent') === 'granted';
+			} catch (e) {}
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			window.gtag = gtag;
+			gtag('consent', 'default', {
+				'ad_storage': 'denied',
+				'ad_user_data': 'denied',
+				'ad_personalization': 'denied',
+				'analytics_storage': granted ? 'granted' : 'denied'
+			});
+			gtag('js', new Date());
+			gtag('config', 'G-SD849LC3MR', {
+				'allow_google_signals': false,
+				'allow_ad_personalization_signals': false
+			});
+		})();
+	</script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-SD849LC3MR"></script>

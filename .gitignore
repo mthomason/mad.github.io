@@ -16,3 +16,7 @@ Icon?
 .vscode/
 .idea/
 *.swp
+
+# Jekyll build output
+_site/
+.jekyll-cache/
