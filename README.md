@@ -1,38 +1,58 @@
 # MAD Designer Website
 
-This repository contains the source code for the official website of **MAD Designer**, a mobile analytics document designer for iOS, iPadOS, and macOS. The live website can be visited at [mad.everydayapps.com](https://mad.everydayapps.com).
+This repository contains the source for the official website of **MAD Designer**, an open-source business intelligence and report designer for iOS, native macOS, and native Windows. The live site is [mad.everydayapps.com](https://mad.everydayapps.com).
+
+The desktop applications ship **0.7**; the engine is **9.0** (`r4433`). The iOS App Store release returns in early 2027.
 
 ## About MAD Designer
 
-MAD Designer is an open-source business intelligence (BI) tool that empowers users to design, view, and share custom reports directly from their enterprise data sources. Built for professionals who need on-the-go access to their data, it connects to PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, and SQLite, and runs on iPhone, iPad, and native macOS.
+MAD Designer lets users design, view, and share custom reports directly from their enterprise data sources. It connects to PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, and SQLite on iPhone, iPad, native macOS, and native Windows, and the same engine runs headless on Linux and Windows through the `mad` CLI.
 
 The application consists of three main components:
-1.  A **Query Designer** to build ad hoc queries with multiple tables, joins, and filters.
-2.  A **Report Designer** to create visually rich reports with data labels, images, and custom formatting.
-3.  A **Report Viewer** to interact with the generated reports.
 
-Reports are saved as `.mad` files (Mobile Analytics Document), a self-contained format that bundles the data connection, query, and layout, making them easy to share with other MAD Designer users.
+1. A **Query Designer** to build ad hoc queries with multiple tables, joins, filters, and groupings.
+2. A **Report Designer** to create visually rich reports with data labels, images, and custom formatting.
+3. A **Report Viewer** to interact with the generated reports.
+
+Reports are saved as `.mad` files (Mobile Analytics Document), a portable document that holds the schema, query, and layout. The format has an open specification at [docs.everydayapps.com](https://docs.everydayapps.com/).
+
+The application UI is available in English, Simplified Chinese, Japanese, Brazilian Portuguese, German, and Latin American Spanish. The translations are machine-assisted and may contain errors.
 
 ## Key Features
 
-*   **Direct Database Connectivity**: Securely connect to PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, and SQLite databases.
-*   **Powerful Query Builder**: Craft complex SQL queries with an intuitive visual interface.
-*   **Rich Report Authoring**: Design professional reports with a variety of formatting and layout options.
-*   **Share and Export**: Share interactive `.mad` files with colleagues or export reports as static PDFs for wider distribution.
+* **Direct Database Connectivity**: PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, and SQLite.
+* **Powerful Query Builder**: complex queries through a visual table/join canvas or pasted SQL.
+* **Rich Report Authoring**: data labels, images, aggregates, barcodes, and custom formatting.
+* **Share and Export**: interactive `.mad` files, or PDF, HTML, CSV, and JSON.
+* **Headless Engine and CLI**: the same engine as the apps, driven by `mad` and `mad-action`.
+* **Open `.mad` Format**: one portable, inspectable document with a published specification.
+* **Six UI Languages**: English plus the five translations, with the machine-assisted caveat.
 
 ## Target Audience
 
 MAD Designer is built for:
-*   **Business Analysts** who need to transform raw data into actionable insights.
-*   **Data Professionals & Developers** who need to quickly test queries and prototype data solutions for end-users.
+
+* **Business Analysts** who need to transform raw data into actionable insights.
+* **Data Professionals & Developers** who need to test queries, embed the engine, or automate reports.
+
+The desktop builds are unsigned, so the current audience is primarily developers and technical users. The Windows build is unsigned and SmartScreen will ask; the install guidance is in the [Windows guide](https://docs.everydayapps.com/windows.html).
 
 ## About This Website
 
-This website is built with static HTML, CSS, and a small amount of JavaScript. It serves as the main marketing and support hub for the MAD Designer application. All custom styles are located in the `css/style.css` file. Please note that this project uses tabs for indentation.
+This site is built with Jekyll. English pages are at the repository root; `de/`, `es/`, `ja/`, `pt-br/`, and `zh/` mirror the five content pages. One layout (`_layouts/default.html`) and its includes hold the header, footer, analytics, consent banner, language switcher, and `hreflang` set. All custom styles are in `css/style.css`.
+
+`_data/versions.yml` is the version source. Change it in both this repository and the Reports documentation repository. The English privacy policy is authoritative; translations carry an "English original prevails" notice. The build excludes `README.md`, `AGENTS.md`, and every other Markdown source.
+
+```sh
+jekyll build -d _site
+python3 scripts/check_site.py
+```
+
+This project uses tabs for indentation.
 
 ## Other Documents
 
-*    [Documentation site](https://docs.everydayapps.com/) — the `.mad` specification, macOS guide, and developer docs
-*    [Privacy Policy](privacy.md)
-*    [About the .MAD File Type](mad-file-type.md)
-
+* [Documentation site](https://docs.everydayapps.com/) — the `.mad` specification, app guides, and developer documentation
+* [Developer documentation](https://docs.everydayapps.com/developers/) — format, CLI, architecture, and build records
+* [Privacy Policy](privacy.html)
+* [About the .MAD File Type](mad-file-type.html)

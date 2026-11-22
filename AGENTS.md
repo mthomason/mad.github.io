@@ -2,36 +2,33 @@
 
 ## Details
 
-MAD Designer is a mobile analytics document designer built for iOS devices (iPhone, iPad, My Mac (designed for iPad)).  It is currently between Apple App Store releases and returns in early 2027; [sponsorship](https://github.com/sponsors/mthomason) funds the relaunch.
+MAD Designer is a mobile analytics document designer built for iOS (iPhone and iPad), native macOS, and native Windows.  The desktop applications are version `0.7`; the engine is `9.0` (`r4433`).  The iOS App Store release returns in early 2027; [sponsorship](https://github.com/sponsors/mthomason) funds the relaunch.
 
 This project uses tabs for spacing.
 
 Below are some details about the application:
 
 1. `MAD` is short for Mobile Analytics Document (M.A.D.).  The software is a _mobile analytics document designer_.
-2. It is not yet localized.  It is currently English only.  Other languages should be coming soon, but no promises.
-3. It allows users to connect to the following databases
-	1. MySQL
-	2. Microsoft SQL Server
+2. The application UI is localized into English, Simplified Chinese, Japanese, Brazilian Portuguese, German, and Latin American Spanish.  The translations are machine-assisted and may contain errors.
+3. It connects to PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, and SQLite.
 4. It is a modern business intelligence platform.
 5. The software has three main parts
 	1. A query designer
 	2. A report designer
 	3. A report viewer
-6. The target of this application are users and businesses that want to connect to MySQL and Microsoft SQL Server from their iPhone, iPad, or Mac OS.
-7. The application name is `MAD Designer`
-8. This website is made up of static web files
-9. This website is hosted at [mad.everydayapps.com](https://mad.everydayapps.com/) though the repo name is `mad.github.io`.  It is hosted by Github, but the Github URL for the site should not be used.
+6. The target audience is business analysts, data professionals, and developers who want to connect to their databases from an iPhone, iPad, Mac, or Windows PC.
+7. The application name is `MAD Designer`.
+8. This website is built with Jekyll: one layout and include set, English pages at the root, and translated pages under `de/`, `es/`, `ja/`, `pt-br/`, and `zh/`.
+9. This website is hosted at [mad.everydayapps.com](https://mad.everydayapps.com/) though the repo name is `mad.github.io`.  GitHub Pages builds it from `main`; the GitHub URL for the site should not be used.
 
 ## App Store Information
 
-**Current status**: The app is not currently in the App Store; the relaunch is targeted for early 2027. The listing below is the record from the last release.
+**Current status**: The iOS app is not currently in the App Store; the relaunch is targeted for early 2027. The macOS and Windows applications ship `0.7`; the engine is `9.0` (`r4433`). The listing below is the record from the last iOS release.
 
 **Name**: MAD Designer
 **Subtitle**: Mobile BI Report Builder
 **Bundle ID**: com.everydayapps.mad.designer
 **Apple ID**: 666001433
-**Subtitle**: Mobile BI Report Builder
 **Category**: _Business_ and _Productivity_
 **Age Suitability URL**: There currently isn't one
 **Promotional Text**: Design and share custom business intelligence reports on the go. Connect to SQL Server and MySQL, build queries, and export reports instantly.
@@ -65,10 +62,10 @@ The icons are in the `img` folder.  The number at the end of the icon name is th
 
 ## Development Guidelines
 
-- **Privacy Policy**: The text content of `privacy.html` is a legal document and **must not be altered**. You may update the styling and layout, but the core text must remain unchanged.
-- **Indentation**: Use tabs for indentation in all HTML and CSS files.
-- **Website Structure**: The website is built with static HTML and CSS. All styles should be centralized in the `css/style.css` file to maintain a consistent design.
-- **Verification**: Before submitting changes, perform frontend verification by running a Playwright script to capture screenshots of the updated pages. Ensure the visual appearance is correct.
+- **Privacy Policy**: The English text of `privacy.html` is the authoritative legal document. Translations must be faithful copies and must carry a visible "English original prevails" notice. Styling and layout may change; the English terms may not.
+- **Indentation**: Use tabs in HTML, CSS, and configuration files.
+- **Website Structure**: Jekyll with one layout (`_layouts/default.html`) and shared includes (`_includes/`). All styles stay in `css/style.css`. English pages are at the root; `de/`, `es/`, `ja/`, `pt-br/`, and `zh/` mirror them. `_data/versions.yml` is the version source; change it in both this repository and the Reports documentation repository.
+- **Verification**: Run `jekyll build -d _site` and the link/fact checks before submitting. Use a Playwright script to capture screenshots of the changed pages at desktop and mobile widths. The built `_site` must contain no source Markdown.
 
 ## Screenshots and App Preview
 
