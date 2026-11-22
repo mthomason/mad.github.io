@@ -1,0 +1,27 @@
+---
+layout: default
+title: サポートへのお問い合わせ
+description: サポート、フィードバック、または PostgreSQL、MySQL、MariaDB、Microsoft SQL Server、SQLite への接続に関するお問い合わせについて、MAD Designer チームにご連絡ください。
+image: /img/mad-designer-icon-1024.png
+keywords: contact, support, feedback, help, mad designer, mobile bi
+lang: ja-JP
+---
+
+<main class="container form-page">
+		<h1>サポートへのお問い合わせ</h1>
+		<p>以下のフォームから、サポートやフィードバックをお寄せください。メールアドレスは返信のみに使用します。</p>
+		<form action="https://formspree.io/f/xpwylrga" method="POST">
+			<input type="hidden" name="_subject" value="MAD Designer support request">
+			<input type="hidden" name="_next" value="https://mad.everydayapps.com/ja/thanks.html">
+			<input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+			<label for="email">メールアドレス:</label>
+			<input type="email" id="email" name="email" autocomplete="email" required>
+
+			<label for="message">メッセージ:</label>
+			<textarea id="message" name="message" placeholder="ここにメッセージを入力してください..." minlength="10" required></textarea>
+
+			<button type="submit" class="btn">メッセージを送信</button>
+		</form>
+		<p class="form-note">フォームは <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree</a> を介して送信されます。メッセージは当方に届く前に同社のサーバーで処理されます。</p>
+	</main>
