@@ -1,0 +1,7 @@
+# Docs-site path prefix for each UI language.
+en: ""
+zh-CN: "/zh"
+ja-JP: "/ja"
+pt-BR: "/pt-br"
+de-DE: "/de"
+es-419: "/es"

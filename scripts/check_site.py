@@ -5,7 +5,8 @@
 Run with: python3 -I scripts/check_site.py
 
 Checks internal href/src targets, the five-page set in every language, source
-Markdown leaks, and duplicate sitemap entries.
+Markdown leaks, duplicate sitemap entries, and that a localized page links the
+docs tree for its own language.
 """
 
 import argparse
@@ -17,10 +18,15 @@ from urllib.parse import unquote, urlparse
 
 LANGUAGES = ("zh", "ja", "pt-br", "de", "es")
 PAGES = ("index.html", "contact.html", "mad-file-type.html", "privacy.html", "thanks.html")
+DOCS_HOST = "https://docs.everydayapps.com"
+DOCS_PREFIX = {"zh": "/zh", "ja": "/ja", "pt-br": "/pt-br", "de": "/de", "es": "/es"}
 LINK_RE = re.compile(r"""(?:href|src)\s*=\s*(?:"([^"]*)"|'([^']*)')""")
 LOC_RE = re.compile(r"<loc>([^<]+)</loc>")
 
-Findings = namedtuple("Findings", "broken missing source_markdown sitemap_duplicates sitemap_missing")
+Findings = namedtuple(
+	"Findings",
+	"broken missing source_markdown sitemap_duplicates sitemap_missing docs_language",
+)
 
 
 def _targets(path):
@@ -81,6 +87,35 @@ def missing_pages(site_root, languages=LANGUAGES):
 	return missing
 
 
+def docs_language(site_root, languages=LANGUAGES):
+	"""A localized page must link the docs tree for its own language; an
+	English page must not link a language tree."""
+	site_root = os.path.abspath(site_root)
+	findings = []
+	for dirpath, _, filenames in os.walk(site_root):
+		for name in filenames:
+			if not name.endswith(".html"):
+				continue
+			page = os.path.join(dirpath, name)
+			relative = os.path.relpath(page, site_root)
+			language = relative.split(os.sep, 1)[0]
+			expected = DOCS_PREFIX.get(language, "")
+			for target in _targets(page):
+				if not target.startswith(DOCS_HOST + "/"):
+					continue
+				path = urlparse(target).path
+				if expected:
+					if not (path == expected or path.startswith(expected + "/")):
+						findings.append((relative, target))
+				elif any(
+					path == prefix or path.startswith(prefix + "/")
+					for prefix in DOCS_PREFIX.values()
+				):
+					findings.append((relative, target))
+	findings.sort()
+	return findings
+
+
 def source_markdown(site_root):
 	found = []
 	for dirpath, _, filenames in os.walk(os.path.abspath(site_root)):
@@ -121,6 +156,7 @@ def check_site(site_root, languages=LANGUAGES):
 		source_markdown(site_root),
 		sitemap_duplicates(site_root),
 		sitemap_missing(site_root, languages),
+		docs_language(site_root, languages),
 	)
 
 
@@ -136,6 +172,7 @@ def main(argv=None):
 		("source-markdown", findings.source_markdown),
 		("sitemap-duplicates", findings.sitemap_duplicates),
 		("sitemap-missing", findings.sitemap_missing),
+		("docs-language", findings.docs_language),
 	):
 		print(f"{name}: {len(values)}")
 		for value in values:

@@ -18,11 +18,11 @@ lang: de-DE
 					<a class="sponsor-button" href="{{ site.data.versions.release_base_url }}/MAD-Designer-macOS.dmg">Für macOS herunterladen (.dmg)</a>
 					<a class="sponsor-button" href="{{ site.data.versions.release_base_url }}/MAD-Designer-Windows-0.7.zip">Für Windows herunterladen (.zip)</a>
 					<a class="sponsor-button secondary-button" href="https://github.com/mthomason/MAD" target="_blank" rel="noopener">Quellcode auf GitHub ansehen</a>
-					<a class="sponsor-button secondary-button" href="https://docs.everydayapps.com/" target="_blank" rel="noopener">Dokumentation &amp; Anleitungen</a>
+					<a class="sponsor-button secondary-button" href="https://docs.everydayapps.com{{ site.data.docs_paths[page.lang] }}/" target="_blank" rel="noopener">Dokumentation &amp; Anleitungen</a>
 					<a id="sponsor-link" class="sponsor-button accent-button" href="https://github.com/sponsors/mthomason" target="_blank" rel="noopener">App-Store-Neustart unterstützen</a>
 				</div>
-				<p class="app-availability-text">Installation über Homebrew: <code>brew install --cask mthomason/tap/mad-designer</code> &bull; Beispielberichte: <a href="{{ site.data.versions.release_base_url }}/London.mad" style="color: #ffffff; text-decoration: underline;">London.mad</a> &middot; <a href="{{ site.data.versions.release_base_url }}/Music.mad" style="color: #ffffff; text-decoration: underline;">Music.mad</a></p>
-				<p class="app-availability-text">Version: App {{ site.data.versions.macos_app_version }} / Engine {{ site.data.versions.engine_version }} ({{ site.data.versions.engine_revision }}). Die Desktop-Builds sind nicht signiert; unter Windows wird SmartScreen nachfragen — wählen Sie „Weitere Informationen“ → „Trotzdem ausführen“ (siehe die <a href="https://docs.everydayapps.com/windows.html" style="color: #ffffff; text-decoration: underline;">Windows-Anleitung</a>).</p>
+				<p class="app-availability-text">Installation über Homebrew: <code>brew install --cask mthomason/tap/mad-designer</code></p>
+				<p class="app-availability-text">Version: App {{ site.data.versions.macos_app_version }} / Engine {{ site.data.versions.engine_version }} ({{ site.data.versions.engine_revision }}). Die Desktop-Builds sind nicht signiert; unter Windows wird SmartScreen nachfragen — wählen Sie „Weitere Informationen“ → „Trotzdem ausführen“ (siehe die <a href="https://docs.everydayapps.com{{ site.data.docs_paths[page.lang] }}/windows.html" style="color: #ffffff; text-decoration: underline;">Windows-Anleitung</a>).</p>
 				<p class="app-availability-text">Die Benutzeroberfläche der Anwendung ist in Englisch, vereinfachtem Chinesisch, Japanisch, brasilianischem Portugiesisch, Deutsch und lateinamerikanischem Spanisch verfügbar. Die Übersetzungen sind maschinell unterstützt und können Fehler enthalten; melden Sie diese bitte im <a href="https://github.com/mthomason/MAD/issues" style="color: #ffffff; text-decoration: underline;">Issue-Tracker</a>.</p>
 				<p class="app-availability-text">Die iOS-App kehrt Anfang 2027 in den App Store zurück. Sponsoren finanzieren die Entwicklung und den Neustart.</p>
 			</div>
@@ -143,11 +143,11 @@ lang: de-DE
 			<h2>Auf MAD aufbauen</h2>
 			<div class="audience-grid">
 				<div class="audience-item">
-					<h3><a href="https://docs.everydayapps.com/developers/">Den Kontrakt lesen</a></h3>
+					<h3><a href="https://docs.everydayapps.com{{ site.data.docs_paths[page.lang] }}/developers/">Den Kontrakt lesen</a></h3>
 					<p>Die Format-Spezifikation, das Datenobjekt-Design und die Entwicklerhandbücher.</p>
 				</div>
 				<div class="audience-item">
-					<h3><a href="https://docs.everydayapps.com/developers/cli.html">Headless ausführen</a></h3>
+					<h3><a href="https://docs.everydayapps.com{{ site.data.docs_paths[page.lang] }}/developers/cli.html">Headless ausführen</a></h3>
 					<p>Die <code>mad</code>-CLI und <a href="https://github.com/mthomason/mad-action">mad-action</a> führen einen eingecheckten Bericht ohne UI aus.</p>
 				</div>
 				<div class="audience-item">

@@ -47,6 +47,24 @@ class CheckSiteTest(unittest.TestCase):
 		self.write("de/index.html", "<p>Deutsch</p>")
 		self.assertEqual(check_site.check_links(str(self.root)), [])
 
+	def test_localized_page_must_link_its_own_docs_tree(self):
+		self.write("de/index.html", '<a href="https://docs.everydayapps.com/developers/">x</a>')
+		self.assertEqual(
+			check_site.docs_language(str(self.root)),
+			[("de/index.html", "https://docs.everydayapps.com/developers/")],
+		)
+		self.write("de/index.html", '<a href="https://docs.everydayapps.com/de/developers/">x</a>')
+		self.assertEqual(check_site.docs_language(str(self.root)), [])
+
+	def test_english_page_must_not_link_a_language_tree(self):
+		self.write("index.html", '<a href="https://docs.everydayapps.com/de/developers/">x</a>')
+		self.assertEqual(
+			check_site.docs_language(str(self.root)),
+			[("index.html", "https://docs.everydayapps.com/de/developers/")],
+		)
+		self.write("index.html", '<a href="https://docs.everydayapps.com/developers/">x</a>')
+		self.assertEqual(check_site.docs_language(str(self.root)), [])
+
 	def test_source_markdown_is_reported(self):
 		self.write("README.md", "# source")
 		self.assertEqual(check_site.source_markdown(str(self.root)), ["README.md"])
