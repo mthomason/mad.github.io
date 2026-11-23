@@ -2,7 +2,7 @@
 		<div class="container">
 			<p>&copy; 2025&ndash;2026 Everyday Apps LLC. All rights reserved.</p>
 			<nav>
-				<a href="https://docs.everydayapps.com/">{% if page_lang contains "zh" %}文档{% elsif page_lang contains "ja" %}ドキュメント{% elsif page_lang contains "pt" %}Documentação{% elsif page_lang contains "de" %}Dokumentation{% elsif page_lang contains "es" %}Documentación{% else %}Docs{% endif %}</a> |
+				<a href="https://docs.everydayapps.com{{ site.data.docs_paths[page_lang] }}/">{% if page_lang contains "zh" %}文档{% elsif page_lang contains "ja" %}ドキュメント{% elsif page_lang contains "pt" %}Documentação{% elsif page_lang contains "de" %}Dokumentation{% elsif page_lang contains "es" %}Documentación{% else %}Docs{% endif %}</a> |
 				<a href="https://github.com/mthomason/MAD">GitHub</a> |
 				<a href="contact.html">{% if page_lang contains "zh" %}联系{% elsif page_lang contains "ja" %}お問い合わせ{% elsif page_lang contains "pt" %}Contato{% elsif page_lang contains "de" %}Kontakt{% elsif page_lang contains "es" %}Contacto{% else %}Contact{% endif %}</a> |
 				<a href="privacy.html">{% if page_lang contains "zh" %}隐私{% elsif page_lang contains "ja" %}プライバシー{% elsif page_lang contains "pt" %}Privacidade{% elsif page_lang contains "de" %}Datenschutz{% elsif page_lang contains "es" %}Privacidad{% else %}Privacy{% endif %}</a>

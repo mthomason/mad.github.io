@@ -48,6 +48,10 @@ jekyll build -d _site
 python3 scripts/check_site.py
 ```
 
+The checker also verifies that every docs link on a localized page stays in
+that language's docs tree (and that English pages do not link a translated
+tree), using `_data/docs_paths.yml`.
+
 This project uses tabs for indentation.
 
 ## Other Documents

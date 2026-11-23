@@ -18,11 +18,11 @@ lang: zh-CN
 					<a class="sponsor-button" href="{{ site.data.versions.release_base_url }}/MAD-Designer-macOS.dmg">下载 macOS 版（.dmg）</a>
 					<a class="sponsor-button" href="{{ site.data.versions.release_base_url }}/MAD-Designer-Windows-0.7.zip">下载 Windows 版（.zip）</a>
 					<a class="sponsor-button secondary-button" href="https://github.com/mthomason/MAD" target="_blank" rel="noopener">在 GitHub 上查看源代码</a>
-					<a class="sponsor-button secondary-button" href="https://docs.everydayapps.com/" target="_blank" rel="noopener">文档与指南</a>
+					<a class="sponsor-button secondary-button" href="https://docs.everydayapps.com{{ site.data.docs_paths[page.lang] }}/" target="_blank" rel="noopener">文档与指南</a>
 					<a id="sponsor-link" class="sponsor-button accent-button" href="https://github.com/sponsors/mthomason" target="_blank" rel="noopener">赞助 App Store 重新上架</a>
 				</div>
-				<p class="app-availability-text">通过 Homebrew 安装：<code>brew install --cask mthomason/tap/mad-designer</code> &bull; 示例报表：<a href="{{ site.data.versions.release_base_url }}/London.mad" style="color: #ffffff; text-decoration: underline;">London.mad</a> &middot; <a href="{{ site.data.versions.release_base_url }}/Music.mad" style="color: #ffffff; text-decoration: underline;">Music.mad</a></p>
-				<p class="app-availability-text">版本：应用 {{ site.data.versions.macos_app_version }} / 引擎 {{ site.data.versions.engine_version }}（{{ site.data.versions.engine_revision }}）。桌面版构建未签名；在 Windows 上，SmartScreen 会发出询问——请选择“更多信息”→“仍要运行”（参见 <a href="https://docs.everydayapps.com/windows.html" style="color: #ffffff; text-decoration: underline;">Windows 指南</a>）。</p>
+				<p class="app-availability-text">通过 Homebrew 安装：<code>brew install --cask mthomason/tap/mad-designer</code></p>
+				<p class="app-availability-text">版本：应用 {{ site.data.versions.macos_app_version }} / 引擎 {{ site.data.versions.engine_version }}（{{ site.data.versions.engine_revision }}）。桌面版构建未签名；在 Windows 上，SmartScreen 会发出询问——请选择“更多信息”→“仍要运行”（参见 <a href="https://docs.everydayapps.com{{ site.data.docs_paths[page.lang] }}/windows.html" style="color: #ffffff; text-decoration: underline;">Windows 指南</a>）。</p>
 				<p class="app-availability-text">应用程序界面提供英语、简体中文、日语、巴西葡萄牙语、德语和拉丁美洲西班牙语版本。翻译为机器辅助完成，可能包含错误；请在<a href="https://github.com/mthomason/MAD/issues" style="color: #ffffff; text-decoration: underline;">问题跟踪器</a>中报告。</p>
 				<p class="app-availability-text">iOS App Store 版本将于 2027 年初回归。赞助者资助开发和重新上架。</p>
 			</div>
@@ -143,11 +143,11 @@ lang: zh-CN
 			<h2>基于 MAD 构建</h2>
 			<div class="audience-grid">
 				<div class="audience-item">
-					<h3><a href="https://docs.everydayapps.com/developers/">阅读契约</a></h3>
+					<h3><a href="https://docs.everydayapps.com{{ site.data.docs_paths[page.lang] }}/developers/">阅读契约</a></h3>
 					<p>格式规范、数据对象设计和开发者指南。</p>
 				</div>
 				<div class="audience-item">
-					<h3><a href="https://docs.everydayapps.com/developers/cli.html">以无头方式运行</a></h3>
+					<h3><a href="https://docs.everydayapps.com{{ site.data.docs_paths[page.lang] }}/developers/cli.html">以无头方式运行</a></h3>
 					<p><code>mad</code> CLI 和 <a href="https://github.com/mthomason/mad-action">mad-action</a> 无需界面即可运行已检入的报表。</p>
 				</div>
 				<div class="audience-item">
