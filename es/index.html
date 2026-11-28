@@ -12,7 +12,7 @@ lang: es-419
 		<div class="container">
 			<h1>MAD Designer</h1>
 			<p class="hero-subheading">Creador de informes de BI de código abierto para macOS, Windows e iOS</p>
-			<p>Diseñe y comparta informes de inteligencia de negocios personalizados en cualquier lugar. Conéctese a PostgreSQL, MySQL, MariaDB, Microsoft SQL Server y SQLite; cree consultas visualmente o en SQL; y exporte a PDF, HTML, CSV y JSON. El mismo motor se ejecuta sin interfaz en Linux y Windows.</p>
+			<p>Diseñe y comparta informes de inteligencia de negocios personalizados en cualquier lugar. Conéctese a PostgreSQL, MySQL, MariaDB, Microsoft SQL Server y SQLite; cree consultas visualmente o en SQL; y exporte a PDF, HTML, CSV y JSON. Combine informes de varias bases de datos en un solo documento portátil con <strong>Informes de composición</strong>. El mismo motor se ejecuta sin interfaz en Linux y Windows.</p>
 			<div class="app-store-container">
 				<div class="hero-buttons">
 					<a class="sponsor-button" href="{{ site.data.versions.release_base_url }}/MAD-Designer-macOS.dmg">Descargar para macOS (.dmg)</a>
@@ -22,7 +22,7 @@ lang: es-419
 					<a id="sponsor-link" class="sponsor-button accent-button" href="https://github.com/sponsors/mthomason" target="_blank" rel="noopener">Patrocina el relanzamiento en la App Store</a>
 				</div>
 				<p class="app-availability-text">Instalar con Homebrew: <code>brew install --cask mthomason/tap/mad-designer</code></p>
-				<p class="app-availability-text">Versión: app {{ site.data.versions.macos_app_version }} / motor {{ site.data.versions.engine_version }} ({{ site.data.versions.engine_revision }}). Las compilaciones de escritorio no están firmadas; en Windows, SmartScreen preguntará: elija Más información → Ejecutar de todas formas (consulte la <a href="https://docs.everydayapps.com{{ site.data.docs_paths[page.lang] }}/windows.html" style="color: #ffffff; text-decoration: underline;">guía de Windows</a>).</p>
+				<p class="app-availability-text">Versión: app {{ site.data.versions.macos_app_version }} / motor {{ site.data.versions.engine_version }} ({{ site.data.versions.engine_revision }}). <strong>Los informes de composición son nuevos en la próxima versión 0.8.</strong> Las compilaciones de escritorio no están firmadas; en Windows, SmartScreen preguntará: elija Más información → Ejecutar de todas formas (consulte la <a href="https://docs.everydayapps.com{{ site.data.docs_paths[page.lang] }}/windows.html" style="color: #ffffff; text-decoration: underline;">guía de Windows</a>).</p>
 				<p class="app-availability-text">La interfaz de la aplicación está disponible en inglés, chino simplificado, japonés, portugués de Brasil, alemán y español latinoamericano. Las traducciones son asistidas por máquina y pueden contener errores; repórtelos en <a href="https://github.com/mthomason/MAD/issues" style="color: #ffffff; text-decoration: underline;">el rastreador de problemas</a>.</p>
 				<p class="app-availability-text">La versión de iOS para la App Store regresa a principios de 2027. Los patrocinadores financian el desarrollo y el relanzamiento.</p>
 			</div>
@@ -60,6 +60,10 @@ lang: es-419
 					</div>
 					<h3>Compartir y exportar</h3>
 					<p>Comparta informes interactivos con sus colegas o expórtelos como PDF para una amplia distribución.</p>
+				</div>
+				<div class="feature">
+					<h3>Informes de composición</h3>
+					<p>Combine informes de varias bases de datos en un solo documento <code>.mad</code>. Cada origen conserva su propia consulta, diseño y datos, y el Resultado los une localmente.</p>
 				</div>
 				<div class="feature">
 					<h3>Motor sin interfaz y CLI</h3>

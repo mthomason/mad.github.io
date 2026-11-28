@@ -12,7 +12,7 @@ lang: zh-CN
 		<div class="container">
 			<h1>MAD Designer</h1>
 			<p class="hero-subheading">适用于 macOS、Windows 和 iOS 的开源 BI 报表构建工具</p>
-			<p>随时随地设计和共享自定义商业智能报表。连接 PostgreSQL、MySQL、MariaDB、Microsoft SQL Server 和 SQLite；以可视化方式或使用 SQL 构建查询；并导出为 PDF、HTML、CSV 和 JSON。同一引擎可在 Linux 和 Windows 上以无头方式运行。</p>
+			<p>随时随地设计和共享自定义商业智能报表。连接 PostgreSQL、MySQL、MariaDB、Microsoft SQL Server 和 SQLite；以可视化方式或使用 SQL 构建查询；并导出为 PDF、HTML、CSV 和 JSON。使用<strong>组合报表</strong>将来自多个数据库的报表合并为一个便携式文档。同一引擎可在 Linux 和 Windows 上以无头方式运行。</p>
 			<div class="app-store-container">
 				<div class="hero-buttons">
 					<a class="sponsor-button" href="{{ site.data.versions.release_base_url }}/MAD-Designer-macOS.dmg">下载 macOS 版（.dmg）</a>
@@ -22,7 +22,7 @@ lang: zh-CN
 					<a id="sponsor-link" class="sponsor-button accent-button" href="https://github.com/sponsors/mthomason" target="_blank" rel="noopener">赞助 App Store 重新上架</a>
 				</div>
 				<p class="app-availability-text">通过 Homebrew 安装：<code>brew install --cask mthomason/tap/mad-designer</code></p>
-				<p class="app-availability-text">版本：应用 {{ site.data.versions.macos_app_version }} / 引擎 {{ site.data.versions.engine_version }}（{{ site.data.versions.engine_revision }}）。桌面版构建未签名；在 Windows 上，SmartScreen 会发出询问——请选择“更多信息”→“仍要运行”（参见 <a href="https://docs.everydayapps.com{{ site.data.docs_paths[page.lang] }}/windows.html" style="color: #ffffff; text-decoration: underline;">Windows 指南</a>）。</p>
+				<p class="app-availability-text">版本：应用 {{ site.data.versions.macos_app_version }} / 引擎 {{ site.data.versions.engine_version }}（{{ site.data.versions.engine_revision }}）。<strong>组合报表将在即将发布的 0.8 版本中推出。</strong>桌面版构建未签名；在 Windows 上，SmartScreen 会发出询问——请选择“更多信息”→“仍要运行”（参见 <a href="https://docs.everydayapps.com{{ site.data.docs_paths[page.lang] }}/windows.html" style="color: #ffffff; text-decoration: underline;">Windows 指南</a>）。</p>
 				<p class="app-availability-text">应用程序界面提供英语、简体中文、日语、巴西葡萄牙语、德语和拉丁美洲西班牙语版本。翻译为机器辅助完成，可能包含错误；请在<a href="https://github.com/mthomason/MAD/issues" style="color: #ffffff; text-decoration: underline;">问题跟踪器</a>中报告。</p>
 				<p class="app-availability-text">iOS App Store 版本将于 2027 年初回归。赞助者资助开发和重新上架。</p>
 			</div>
@@ -60,6 +60,10 @@ lang: zh-CN
 					</div>
 					<h3>共享与导出</h3>
 					<p>与同事共享交互式报表，或将其导出为 PDF 以便广泛分发。</p>
+				</div>
+				<div class="feature">
+					<h3>组合报表</h3>
+					<p>将来自多个数据库的报表合并为一个 <code>.mad</code> 文档。每个来源保留自己的查询、布局和数据，结果会在本地将它们连接起来。</p>
 				</div>
 				<div class="feature">
 					<h3>无头引擎与 CLI</h3>

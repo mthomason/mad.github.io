@@ -12,7 +12,7 @@ lang: ja-JP
 		<div class="container">
 			<h1>MAD Designer</h1>
 			<p class="hero-subheading">macOS、Windows、iOS 向けのオープンソース BI レポートビルダー</p>
-			<p>カスタムのビジネスインテリジェンスレポートをどこでも設計・共有できます。PostgreSQL、MySQL、MariaDB、Microsoft SQL Server、SQLite に接続し、クエリをビジュアルまたは SQL で作成し、PDF、HTML、CSV、JSON にエクスポートできます。同じエンジンは Linux と Windows でヘッドレスでも動作します。</p>
+			<p>カスタムのビジネスインテリジェンスレポートをどこでも設計・共有できます。PostgreSQL、MySQL、MariaDB、Microsoft SQL Server、SQLite に接続し、クエリをビジュアルまたは SQL で作成し、PDF、HTML、CSV、JSON にエクスポートできます。複数のデータベースのレポートを、<strong>コンポジションレポート</strong>で 1 つのポータブルなドキュメントにまとめられます。同じエンジンは Linux と Windows でヘッドレスでも動作します。</p>
 			<div class="app-store-container">
 				<div class="hero-buttons">
 					<a class="sponsor-button" href="{{ site.data.versions.release_base_url }}/MAD-Designer-macOS.dmg">macOS 版をダウンロード（.dmg）</a>
@@ -22,7 +22,7 @@ lang: ja-JP
 					<a id="sponsor-link" class="sponsor-button accent-button" href="https://github.com/sponsors/mthomason" target="_blank" rel="noopener">App Store 復帰を支援する</a>
 				</div>
 				<p class="app-availability-text">Homebrew でインストール: <code>brew install --cask mthomason/tap/mad-designer</code></p>
-				<p class="app-availability-text">バージョン: アプリ {{ site.data.versions.macos_app_version }} / エンジン {{ site.data.versions.engine_version }}（{{ site.data.versions.engine_revision }}）。デスクトップ版は署名されていないため、Windows では SmartScreen が確認を求めます —「詳細情報」→「実行」を選択してください（<a href="https://docs.everydayapps.com{{ site.data.docs_paths[page.lang] }}/windows.html" style="color: #ffffff; text-decoration: underline;">Windows ガイド</a>を参照）。</p>
+				<p class="app-availability-text">バージョン: アプリ {{ site.data.versions.macos_app_version }} / エンジン {{ site.data.versions.engine_version }}（{{ site.data.versions.engine_revision }}）。<strong>コンポジションレポートは、今後の 0.8 リリースで新たに追加されます。</strong>デスクトップ版は署名されていないため、Windows では SmartScreen が確認を求めます —「詳細情報」→「実行」を選択してください（<a href="https://docs.everydayapps.com{{ site.data.docs_paths[page.lang] }}/windows.html" style="color: #ffffff; text-decoration: underline;">Windows ガイド</a>を参照）。</p>
 				<p class="app-availability-text">アプリケーションの UI は、英語、簡体字中国語、日本語、ブラジルポルトガル語、ドイツ語、ラテンアメリカスペイン語で利用できます。翻訳は機械支援によるもので、誤りを含む場合があります。誤りは<a href="https://github.com/mthomason/MAD/issues" style="color: #ffffff; text-decoration: underline;">課題トラッカー</a>で報告してください。</p>
 				<p class="app-availability-text">iOS App Store でのリリースは 2027 年初頭に再開されます。スポンサーが開発と復帰を資金面で支えています。</p>
 			</div>
@@ -60,6 +60,10 @@ lang: ja-JP
 					</div>
 					<h3>共有とエクスポート</h3>
 					<p>インタラクティブなレポートを同僚と共有したり、PDF としてエクスポートして広く配布したりできます。</p>
+				</div>
+				<div class="feature">
+					<h3>コンポジションレポート</h3>
+					<p>複数のデータベースのレポートを 1 つの <code>.mad</code> ドキュメントにまとめます。各ソースは独自のクエリ、レイアウト、データを保持し、結果がそれらをローカルで結合します。</p>
 				</div>
 				<div class="feature">
 					<h3>ヘッドレスエンジンと CLI</h3>

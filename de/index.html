@@ -12,7 +12,7 @@ lang: de-DE
 		<div class="container">
 			<h1>MAD Designer</h1>
 			<p class="hero-subheading">Open-Source-BI-Berichtsgenerator für macOS, Windows &amp; iOS</p>
-			<p>Entwerfen und teilen Sie individuelle Business-Intelligence-Berichte überall. Stellen Sie Verbindungen zu PostgreSQL, MySQL, MariaDB, Microsoft SQL Server und SQLite her; erstellen Sie Abfragen visuell oder in SQL und exportieren Sie nach PDF, HTML, CSV und JSON. Dieselbe Engine läuft headless unter Linux und Windows.</p>
+			<p>Entwerfen und teilen Sie individuelle Business-Intelligence-Berichte überall. Stellen Sie Verbindungen zu PostgreSQL, MySQL, MariaDB, Microsoft SQL Server und SQLite her; erstellen Sie Abfragen visuell oder in SQL und exportieren Sie nach PDF, HTML, CSV und JSON. Kombinieren Sie Berichte aus mehreren Datenbanken in einem einzigen portablen Dokument mit <strong>Kompositionsberichten</strong>. Dieselbe Engine läuft headless unter Linux und Windows.</p>
 			<div class="app-store-container">
 				<div class="hero-buttons">
 					<a class="sponsor-button" href="{{ site.data.versions.release_base_url }}/MAD-Designer-macOS.dmg">Für macOS herunterladen (.dmg)</a>
@@ -22,7 +22,7 @@ lang: de-DE
 					<a id="sponsor-link" class="sponsor-button accent-button" href="https://github.com/sponsors/mthomason" target="_blank" rel="noopener">App-Store-Neustart unterstützen</a>
 				</div>
 				<p class="app-availability-text">Installation über Homebrew: <code>brew install --cask mthomason/tap/mad-designer</code></p>
-				<p class="app-availability-text">Version: App {{ site.data.versions.macos_app_version }} / Engine {{ site.data.versions.engine_version }} ({{ site.data.versions.engine_revision }}). Die Desktop-Builds sind nicht signiert; unter Windows wird SmartScreen nachfragen — wählen Sie „Weitere Informationen“ → „Trotzdem ausführen“ (siehe die <a href="https://docs.everydayapps.com{{ site.data.docs_paths[page.lang] }}/windows.html" style="color: #ffffff; text-decoration: underline;">Windows-Anleitung</a>).</p>
+				<p class="app-availability-text">Version: App {{ site.data.versions.macos_app_version }} / Engine {{ site.data.versions.engine_version }} ({{ site.data.versions.engine_revision }}). <strong>Kompositionsberichte sind neu im kommenden 0.8-Release.</strong> Die Desktop-Builds sind nicht signiert; unter Windows wird SmartScreen nachfragen — wählen Sie „Weitere Informationen“ → „Trotzdem ausführen“ (siehe die <a href="https://docs.everydayapps.com{{ site.data.docs_paths[page.lang] }}/windows.html" style="color: #ffffff; text-decoration: underline;">Windows-Anleitung</a>).</p>
 				<p class="app-availability-text">Die Benutzeroberfläche der Anwendung ist in Englisch, vereinfachtem Chinesisch, Japanisch, brasilianischem Portugiesisch, Deutsch und lateinamerikanischem Spanisch verfügbar. Die Übersetzungen sind maschinell unterstützt und können Fehler enthalten; melden Sie diese bitte im <a href="https://github.com/mthomason/MAD/issues" style="color: #ffffff; text-decoration: underline;">Issue-Tracker</a>.</p>
 				<p class="app-availability-text">Die iOS-App kehrt Anfang 2027 in den App Store zurück. Sponsoren finanzieren die Entwicklung und den Neustart.</p>
 			</div>
@@ -60,6 +60,10 @@ lang: de-DE
 					</div>
 					<h3>Teilen &amp; Exportieren</h3>
 					<p>Teilen Sie interaktive Berichte mit Kollegen oder exportieren Sie sie als PDFs für eine breite Verteilung.</p>
+				</div>
+				<div class="feature">
+					<h3>Kompositionsberichte</h3>
+					<p>Kombinieren Sie Berichte aus mehreren Datenbanken in einem einzigen <code>.mad</code>-Dokument. Jede Quelle behält ihre eigene Abfrage, ihr eigenes Layout und ihre eigenen Daten, und das Ergebnis verbindet sie lokal.</p>
 				</div>
 				<div class="feature">
 					<h3>Headless-Engine &amp; CLI</h3>

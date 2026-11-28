@@ -2,7 +2,7 @@
 
 ## Details
 
-MAD Designer is a mobile analytics document designer built for iOS (iPhone and iPad), native macOS, and native Windows.  The desktop applications are version `0.7`; the engine is `9.0` (`r4433`).  The iOS App Store release returns in early 2027; [sponsorship](https://github.com/sponsors/mthomason) funds the relaunch.
+MAD Designer is a mobile analytics document designer built for iOS (iPhone and iPad), native macOS, and native Windows.  The desktop applications are version `0.7`; the engine is `9.0` (`r4433`).  **Composition Reports** are new in the upcoming `0.8` release (engine `9.1`): one `.mad` document combines several reports, each keeping its own query, layout, and data.  The iOS App Store release returns in early 2027; [sponsorship](https://github.com/sponsors/mthomason) funds the relaunch.
 
 This project uses tabs for spacing.
 

@@ -2,7 +2,7 @@
 
 This repository contains the source for the official website of **MAD Designer**, an open-source business intelligence and report designer for iOS, native macOS, and native Windows. The live site is [mad.everydayapps.com](https://mad.everydayapps.com).
 
-The desktop applications ship **0.7**; the engine is **9.0** (`r4433`). The iOS App Store release returns in early 2027.
+The desktop applications ship **0.7**; the engine is **9.0** (`r4433`). **Composition Reports** are new in the upcoming **0.8** release (engine **9.1**). The iOS App Store release returns in early 2027.
 
 ## About MAD Designer
 
@@ -23,6 +23,7 @@ The application UI is available in English, Simplified Chinese, Japanese, Brazil
 * **Direct Database Connectivity**: PostgreSQL, MySQL, MariaDB, Microsoft SQL Server, and SQLite.
 * **Powerful Query Builder**: complex queries through a visual table/join canvas or pasted SQL.
 * **Rich Report Authoring**: data labels, images, aggregates, barcodes, and custom formatting.
+* **Composition Reports**: combine reports from several databases into one portable `.mad` document; every source keeps its own query, layout, and data.
 * **Share and Export**: interactive `.mad` files, or PDF, HTML, CSV, and JSON.
 * **Headless Engine and CLI**: the same engine as the apps, driven by `mad` and `mad-action`.
 * **Open `.mad` Format**: one portable, inspectable document with a published specification.
